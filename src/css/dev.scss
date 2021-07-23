@@ -1,0 +1,27 @@
+.is {
+  &__dev {
+    &.no-scroll {
+      overflow-y: auto!important;
+    }
+    #welcome {
+      position: relative;
+      height:auto;
+      z-index:1;
+
+      &::before {
+        display: none;
+      }
+    }
+    section#prokes {
+      position: relative;
+      opacity: 1;
+      height: auto;
+      &::before {
+        display: none;
+      }
+      .card {
+        opacity: 1;
+      }
+    }
+  }
+}

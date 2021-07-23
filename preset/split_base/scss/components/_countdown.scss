@@ -1,0 +1,54 @@
+section#savedate {
+  .card {
+
+    .countdown {
+      &__container {
+        padding:1rem;
+        text-align: center;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: $secondary;
+      }
+      &__block {
+        display: flex;
+        margin:8px;
+        font-size: $h5;
+        font-weight: $bold;
+
+      } 
+      &__item {
+        padding: 3px 8px;
+        display:flex;
+        align-items: center;
+
+        &.day{
+          font-size: $h1;
+          display: flex;
+          width: 100%;
+          font-weight: $bold;
+          color: $primary;
+
+          .label {
+            margin-left: .7rem;
+            font-size: $h1;
+          }
+          .digit {
+            font-size: $h1;
+          }
+        }
+        .digit {
+          font-size: $h4;
+        }
+        .label {
+          font-size: $p;
+          margin-left: .5rem;
+        }
+      }
+      &__endtext {
+        font-size: $h5;
+      }
+    }
+  }
+}

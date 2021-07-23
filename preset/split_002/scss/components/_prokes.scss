@@ -1,0 +1,117 @@
+
+section#prokes {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  text-align: left;
+  display: flex;
+  opacity:0;
+  transition: opacity .5s linear;
+  color: $light;
+
+  &::before {
+    content:'';
+    background-color: rgba($dark, .5);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:10;
+    transition: opacity .5s linear;
+  }
+  .card {
+    padding:0;
+    position:relative;
+    z-index: 50;
+    display:flex;
+    width:90%;
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:auto;
+    margin-top:10%;
+    padding:1.3rem;
+    opacity:0;
+    background-color: $secondary;
+
+      &__title,
+      &__subtitle {
+        color: $light;
+      }
+
+      &__content {
+        background-color: $secondary;
+        color:$light;
+        flex:1;
+      }
+
+      &__close {
+      position:absolute;
+      width:1.4rem;
+      height:1.4rem;
+      top:0;
+      right:0;
+      background-color: $error;
+      color:white;
+      text-align: center;
+      cursor:pointer;
+      font-size: $h5;
+    }
+    &__image {
+       background-color: white;
+       flex:1;
+       display: flex;
+       align-items: center;
+      img{
+        width:100%;
+        height:auto;
+      }
+    }
+    &__title {
+        font-family: $mainFont;
+        font-size: $h5;
+      }
+    &__subtitle {
+      font-size: $p3;
+    }
+
+    &__body {
+      width:50%;
+      background-color:rgba(245, 245, 245, 0.493);
+      text-align: left;
+      padding:1rem;
+
+    }
+    &__item {
+      font-size: $h6;
+      ul,
+      ol{
+        padding-left:1.5rem;
+        // color:$baseColor;
+        font-weight: $semibold;
+          li {
+            margin-bottom:.5rem;
+            font-size: $p2;
+          }
+        }
+      }
+  }
+}
+@media screen and (max-width: 600px){ 
+  section#prokes {
+    .card {
+      flex-direction: column;
+
+      &__image {
+        width:100%;
+      }
+      &__content {
+        width:100%;
+        display:none
+      }
+    }
+  }
+}

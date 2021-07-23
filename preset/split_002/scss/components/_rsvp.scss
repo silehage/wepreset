@@ -1,0 +1,176 @@
+section#rsvp {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .rsvp__form {
+    width: 100%;
+    .card {
+      display: block;
+      &__title {
+        font-size: $h3;
+      }
+      &__subtitle {
+        font-size: $p3;
+        text-align: center;
+        padding: 5px 12px;
+      }
+      &__content {
+        max-width:600px;
+        width: 100%;
+        margin:auto
+      }
+      &__form {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding:2rem;
+        background-color: rgba($secondary, .1);
+        border-radius: 8px;
+        font-size: $p3;
+  
+        label {
+          display:block;
+          margin-bottom: 1rem;;
+          span {
+            display: block;
+            margin-bottom:.3rem;
+            font-size: $p3;
+          }
+        }
+  
+        .input {
+          width: 100%;
+          padding: 8px;
+          outline: none;
+          border: 1px solid lighten($secondary, 40);
+          border-radius: 6px;
+          background-color: #fffbfb;
+          color: #3b3522;
+  
+            &.error {
+              border: 1px solid red;
+            }
+          }
+        button {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  .rsvp__comment {
+    --bordered: 10px;
+    text-align: left;
+    padding:1.5rem;
+    max-width:600px;
+    width: 100%;
+    margin:auto;
+    .card {
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding:.5rem 1rem;
+        background-color: $secondary;
+        align-items: center;
+        color: $light;
+        border-top-left-radius: var(--bordered);
+        border-top-right-radius: var(--bordered);
+  
+        .title {
+          font-size: $p;
+        }
+  
+        .paginate {
+          display: flex;
+          align-items: center;
+          font-weight: $bold;
+          
+          &__counter {
+            margin-right: 10px;
+          }
+          &__link {
+            --btn-height: 1.5rem;
+            background-color: lighten($secondary, 25);
+            color: $secondary;
+            margin:3px;
+            text-align: center;
+            text-decoration: none;
+            width:var(--btn-height);
+            height:var(--btn-height);
+            cursor:pointer;
+            border-radius: 50%;
+            padding: inherit;
+            display: inline-flex;
+            justify-content: center;
+            align-items: start;
+            font-weight: 600;
+            line-height: 1.3rem;
+  
+            &:hover {
+              background-color: lighten($secondary, 35);
+            }
+            &.disabled {
+              background-color: lighten($grey,20);
+              cursor: not-allowed;
+              color:lighten($grey,10);
+              &:hover {
+                background-color: lighten($grey,20);
+                color:lighten($grey,10);
+              }
+            }
+          }
+        }
+      }
+      &__content {
+        width:100%;
+        padding:0;
+      }
+      &__item:not(:last-child){
+        border-bottom:1px solid lighten($secondary, 40);
+        border-bottom-left-radius: var(--bordered);
+        border-bottom-right-radius: var(--bordered);
+      }
+      &__item{
+        background-color: hsla(0, 0%, 100%, 0.747);
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        p {
+          margin: 0;
+        }
+        .header {
+          padding: .7rem 1rem;
+          display: flex;
+          align-items: center;
+        }
+        .nama {
+          font-size: $p;
+          font-weight: $bold;
+          margin-right:1rem;
+        }
+        .kehadiran {
+          font-size: $p4;
+          font-weight: $bold;
+  
+          &.success {
+            color: $success;
+          }
+          &.info {
+            color:$info;
+          }
+          &.disabled {
+            color: $disabled;
+          }
+        }
+        .ucapan {
+          padding:0 1rem;
+          font-size: $p3;
+          color:lighten($baseColor, 10);
+        }
+      }
+    }
+
+  }
+
+}

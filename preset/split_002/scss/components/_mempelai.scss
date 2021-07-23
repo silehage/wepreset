@@ -1,0 +1,38 @@
+#mempelai {
+  .card {
+    
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top:2rem;
+      margin-bottom: 2rem;
+
+      .image {
+        width:200px;
+        height:200px;
+        overflow:hidden;
+        border:5px solid #fff;
+        box-shadow: 0px 20px 17px -20px #4d4d4d;
+    
+        img {
+          width: 100%;
+          height:auto;
+        }
+
+      }
+
+      .title {
+        margin-top: 1rem;
+        color: $primary;
+        font-weight: $bold;
+      }
+      .description {
+        font-size: $p4;
+        font-weight: $semibold;
+        padding: .4rem;
+      }  
+
+    }
+  }
+}

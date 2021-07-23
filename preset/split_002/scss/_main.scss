@@ -1,0 +1,192 @@
+html {
+  scroll-behavior: smooth;
+}
+*, ::before, ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
+p {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+body{
+  background-color: $backgroundColor;
+  font-family: $mainFont;
+  color: $baseColor;
+  font-size: $baseText;
+  overflow-x: hidden;
+}
+.btn,
+button {
+  cursor: pointer;
+  padding:.7em 2em;
+  font-size: $p3;
+  background-color: lighten($secondary, 6);
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+ transition: all .3s ease-in-out;
+  
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    background-color:$secondary;
+    color: darken(white,3);
+
+  }
+}
+
+main {
+  background-color: $backgroundColor;
+  overflow-x: hidden;
+}
+strong {
+  font-weight: 600;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+h2.title {
+  font-size: $h2;
+}
+h3.title {
+  font-size: $h3;
+}
+h4.title {
+  font-size: $h4;
+}
+h5.title {
+  font-size: $h5;
+}
+h6.title {
+  font-size: $h6;
+}
+.card {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width:100%;
+  max-width: 700px;
+  margin:auto;
+  overflow: hidden;
+
+  &__content {
+    padding:1rem;
+  }
+
+  &__title {
+    font-size: $h3;
+    font-family: $secondaryFont;
+    color: $primary;
+    font-weight: $bold;
+  }
+
+  &__subtitle {
+    font-size: $p2;
+    color:lighten($baseColor, 5);
+    line-height: 1.6;
+    max-width:370px;
+    margin:auto;
+  }
+ 
+}
+// set content when modal welcome is active
+.animate {
+  // transform: translateY(100px);
+  opacity: 0;
+}
+.is__modal {
+  overflow: hidden;
+
+  #content,
+  #main {
+    overflow:hidden;
+  }
+  .panel {
+    &__first {
+      // position:relative;
+      width:100%;
+      opacity: .5;
+    }
+    &__second {
+    }
+  }
+  .hero__content {
+    transform: translate(190px, 50px);
+    opacity: .4;
+  }
+}
+.no-scroll {
+  overflow: hidden
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  &__first {
+    position:relative;
+    width:100%;
+    overflow: hidden;
+  }
+  &__second {
+    position: relative;
+    width:100%;
+    text-align: center;
+    background-color: $backgroundColor;
+    overflow: hidden;
+  }
+}
+
+// Responsive
+
+@media only screen and (min-width: 992px){
+  .flex {
+    flex-direction: row;
+  }
+  .panel {
+
+    &__first {
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      position: fixed;
+      padding: 0;
+      width: $fisrtPanel;
+      height: 100%;
+    }
+
+    &__second {
+      width: $secondPanel;
+      margin-left: auto;
+      text-align: center;
+    }
+  }
+}
+@media only screen and (max-width: 991px){
+  .panel {
+    &__first {
+      height: calc(100vh - 59px)
+    }
+    &__second {
+      padding-bottom: 3rem;
+    }
+
+  }
+  .is__modal {
+    .panel {
+      &__first {
+        height: 100vh;
+      }
+    }
+  }
+
+}

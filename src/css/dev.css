@@ -1,0 +1,28 @@
+.is__dev.no-scroll {
+  overflow-y: auto !important;
+}
+
+.is__dev #welcome {
+  position: relative;
+  height: auto;
+  z-index: 1;
+}
+
+.is__dev #welcome::before {
+  display: none;
+}
+
+.is__dev section#prokes {
+  position: relative;
+  opacity: 1;
+  height: auto;
+}
+
+.is__dev section#prokes::before {
+  display: none;
+}
+
+.is__dev section#prokes .card {
+  opacity: 1;
+}
+/*# sourceMappingURL=dev.css.map */

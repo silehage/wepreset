@@ -1,0 +1,90 @@
+/** Modal Welcome */
+#welcome {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position:fixed;
+  display: flex;
+  opacity: 1;
+  z-index: 500;
+  padding-top:1.5rem;
+  padding-bottom:1.5rem;
+
+  .divider {
+    width: 100%;
+    height: 30px;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+    &::before{
+      height: 30px;
+    }
+  }
+  .modal {
+  
+    &__content {
+      position:relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin:auto;
+      max-width: 500px;
+      padding: 1rem;
+      margin:auto
+  
+    }
+    &__item {
+      .title {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $primary;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .image {
+        width:220px;
+        height:150px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        min-width: 200px;
+        border: 8px solid white;
+        box-shadow: -5px 2px 29px -10px;
+      }
+
+      .description {
+        line-height: 1.5;
+        max-width: 400px;
+        font-size: 14px;
+        color: lighten($baseColor, 10);
+      }
+      
+      button {
+        margin:1.5rem auto .5rem;
+        padding:.7rem 3rem;
+      }
+      .bottom__text{
+        font-size: 11px;
+         color: lighten($baseColor, 10);
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fffbfbbf;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  
+  
+}
