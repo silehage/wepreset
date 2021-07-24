@@ -1,0 +1,168 @@
+section#rsvp {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width:600px;
+  margin:auto;
+
+  .rsvp__form {
+    width: 100%;
+    .card {
+      display: block;
+      &__title {
+        font-size: $h3;
+      }
+      &__subtitle {
+        font-size: $p3;
+        text-align: center;
+        padding: 5px 12px;
+      }
+      &__content {
+        max-width:600px;
+        width: 100%;
+        margin:auto
+      }
+      &__item {
+  
+      }
+      &__form {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding:2rem;
+        background-color: darken($backgroundColor, 5);
+        border-radius: 8px;
+        font-size: $p3;
+  
+        label {
+          display:block;
+          margin-bottom: 1rem;;
+          span {
+            display: block;
+            margin-bottom:.3rem;
+            font-size: $p3;
+          }
+        }
+  
+        .input {
+          width: 100%;
+          padding: 8px;
+          outline: none;
+          border: 1px solid darken($backgroundColor, 10);
+          border-radius: 6px;
+          background-color: #fffbfb;
+          color: #3b3522;
+  
+          &.error {
+            border: 1px solid red;
+          }
+        }
+        button {
+          align-self: flex-end;
+          padding: 8px 16px;
+          background-color: darken($backgroundColor, 30);
+          border-radius: 5px;
+          font-size: $p2;
+          color: white;
+          &:hover,
+          &:focus {
+              background-color: darken($backgroundColor, 35);
+              color: darken(white, 5);
+          }
+        }
+      }
+    }
+  }
+
+  .rsvp__comment {
+    margin-top: 2rem;
+    text-align: left;
+    padding:1rem;
+    width:100%;
+
+    .card {
+      &__header {
+        --btn-width: 1.6rem;
+        --btn-height: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:1rem;
+
+        .paginate {
+          display: flex;
+          align-items: center;
+
+          &__counter {
+            margin-right:.6rem;
+          }
+          &__link {
+            margin: 0.2rem;
+            width: var(--btn-width);
+            height: var(--btn-height);
+            padding:inherit;
+            line-height: .9rem;
+            display:flex;
+            align-items: flex-start;
+            justify-content: center;
+            
+          }
+        }
+      }
+
+      &__content {
+        padding:0px;
+        background-color: rgba(255, 255, 255, 0.432);
+        border-radius: 8px;
+        padding:1rem;
+        width:100%;
+  
+      }
+      &__item{
+
+        background-color: $backgroundColor;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        p {
+          margin: 0;
+        }
+        .header {
+          padding: .7rem 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background-color: darken($backgroundColor, 10);
+        }
+        .nama {
+          font-size: $p1;
+        }
+        .kehadiran {
+          font-size: $p3;
+          padding: 2px 8px;
+          border-radius: 20px;
+          background-color:darken($backgroundColor, 40);
+  
+          &.success {
+            background-color:$success;
+            color: white;
+          }
+          &.info {
+            background-color:$info;
+            color: white;
+          }
+          &.disabled {
+            background-color:$disabled;
+            color: white;
+          }
+        }
+        .ucapan {
+          padding:1rem;
+          font-size: $p3;
+        }
+      }
+    }
+  }
+
+}

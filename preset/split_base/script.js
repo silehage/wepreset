@@ -192,7 +192,7 @@ function prokesAnimateIn () {
     prokesContainer.style.zIndex = 350
     document.body.classList.add('no-scroll')
     setTimeout(() => {
-      animate.in(prokesCard, 'bounceInDown')
+      animate.modal(prokesCard, 'bounceInDown')
     },300)
     has__popup = true
 }

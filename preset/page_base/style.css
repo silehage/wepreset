@@ -232,7 +232,7 @@ p {
 }
 
 body {
-  background-color: #fcf0d9;
+  background-color: #f5fff0;
   font-family: "Montserrat", sans-serif;
   color: #a06c27;
   font-size: 16px;
@@ -262,7 +262,7 @@ button:active {
 }
 
 main {
-  background-color: #fcf0d9;
+  background-color: #f5fff0;
   overflow-x: hidden;
 }
 
@@ -373,16 +373,16 @@ h6.title {
   position: relative;
   width: 100%;
   text-align: center;
-  background-color: #fcf0d9;
+  background-color: #f5fff0;
   overflow: hidden;
 }
 
 @media only screen and (min-width: 992px) {
   .flex {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .panel__first {
     overflow: hidden;
@@ -391,11 +391,9 @@ h6.title {
     bottom: 0;
     position: fixed;
     padding: 0;
-    width: 63%;
     height: 100%;
   }
   .panel__second {
-    width: 37%;
     margin-left: auto;
     text-align: center;
   }
@@ -427,18 +425,7 @@ h6.title {
   z-index: 500;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-#welcome .divider {
-  display: none;
-  width: 100%;
-  height: 30px;
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
-}
-
-#welcome .divider::before {
-  height: 30px;
+  color: white;
 }
 
 #welcome .modal__content {
@@ -463,77 +450,126 @@ h6.title {
   margin: auto;
 }
 
+#welcome .modal__content .divider {
+  display: none;
+  width: 100%;
+  height: 40px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+#welcome .modal__content .divider::before {
+  height: 40px;
+}
+
 #welcome .modal__item:not(:first-child) {
   margin-top: 1rem;
 }
 
-#welcome .modal__item.header > *:not(:first-child) {
-  margin-top: 1rem;
-}
-
-#welcome .modal__item.header .text {
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-#welcome .modal__item.header .name {
+#welcome .modal__item.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: "Great Vibes", cursive;
-  letter-spacing: 2px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#welcome .modal__item.header .name > *:not(:first-child) {
-  margin-left: .4rem;
+#welcome .modal__item.header > *:not(:first-child) {
+  margin-top: .8rem;
+}
+
+#welcome .modal__item.header .text {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  font-weight: 600;
 }
 
 #welcome .modal__item.header .image {
-  width: 220px;
-  height: 150px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  width: 200px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 50%;
   min-width: 200px;
   border: 8px solid white;
   -webkit-box-shadow: -5px 2px 29px -10px;
           box-shadow: -5px 2px 29px -10px;
 }
 
-#welcome .modal__item.body .title {
-  font-size: 1.3rem;
+#welcome .modal__item.header .name {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#welcome .modal__item.body .label {
-  font-size: 0.95rem;
+#welcome .modal__item.header .name > *:not(:first-child) {
+  margin-left: .7rem;
 }
 
-#welcome .modal__item.body .description {
-  line-height: 1.4;
-  font-size: 12.5px;
-  color: #c98731;
+#welcome .modal__item.header .name .title {
+  font-family: "Great Vibes", cursive;
+}
+
+#welcome .modal__item.header .description {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  display: none;
+  line-height: 1.5;
+  max-width: 400px;
+  font-size: 14px;
+  color: #5a726a;
+}
+
+#welcome .modal__item.body {
+  font-size: 0.83rem;
 }
 
 #welcome .modal__item.body .text {
   font-size: 11px;
-  color: #c98731;
+}
+
+#welcome .modal__item.body .title {
+  font-size: 1.3rem;
 }
 
 #welcome .modal__item.action button {
   padding: .6rem 2.6rem;
+  background-color: #037fa5;
+  border: 1px solid #0493be;
+  color: #dcf6fe;
+  font-weight: 600;
+  border-radius: 5px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
 #welcome .modal__item.action button .icon {
   margin-right: .4rem;
+}
+
+#welcome .modal__item.action button:hover, #welcome .modal__item.action button:focus {
+  background-color: #036c8c;
+  color: white;
 }
 
 #welcome::before {
@@ -545,7 +581,7 @@ h6.title {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fffbfbbf;
+  background-color: rgba(3, 3, 3, 0.749);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
@@ -567,7 +603,6 @@ h6.title {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: white;
 }
 
 .home .ornament {
@@ -670,8 +705,7 @@ section#intro .card__item {
 ** Section Acara
 **/
 section#acara .card__title {
-  font-size: 1.3rem;
-  font-family: "Montserrat", sans-serif;
+  font-size: 2.1rem;
 }
 
 section#acara .card__content {
@@ -851,7 +885,7 @@ section#mengundang .card__item .nama {
 section#mengundang .card__item .deskripsi {
   margin-top: 0;
   font-size: 0.83rem;
-  color: #c78a0f;
+  color: #50f000;
 }
 
 section#angpao .card__title {
@@ -1002,7 +1036,7 @@ section#rsvp .rsvp__form .card__form {
           flex-direction: column;
   text-align: left;
   padding: 2rem;
-  background-color: #fae7c1;
+  background-color: #e4ffd6;
   border-radius: 8px;
   font-size: 0.83rem;
 }
@@ -1022,7 +1056,7 @@ section#rsvp .rsvp__form .card__form .input {
   width: 100%;
   padding: 8px;
   outline: none;
-  border: 1px solid #f9deaa;
+  border: 1px solid #d3ffbd;
   border-radius: 6px;
   background-color: #fffbfb;
   color: #3b3522;
@@ -1036,14 +1070,14 @@ section#rsvp .rsvp__form .card__form button {
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 8px 16px;
-  background-color: #f1ba4b;
+  background-color: #8fff57;
   border-radius: 5px;
   font-size: 0.87rem;
   color: white;
 }
 
 section#rsvp .rsvp__form .card__form button:hover, section#rsvp .rsvp__form .card__form button:focus {
-  background-color: #f0b133;
+  background-color: #7eff3d;
   color: #f2f2f2;
 }
 
@@ -1108,7 +1142,7 @@ section#rsvp .rsvp__comment .card__content {
 }
 
 section#rsvp .rsvp__comment .card__item {
-  background-color: #fcf0d9;
+  background-color: #f5fff0;
   border-radius: 10px;
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -1129,7 +1163,7 @@ section#rsvp .rsvp__comment .card__item .header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #f9deaa;
+  background-color: #d3ffbd;
 }
 
 section#rsvp .rsvp__comment .card__item .nama {
@@ -1140,7 +1174,7 @@ section#rsvp .rsvp__comment .card__item .kehadiran {
   font-size: 0.83rem;
   padding: 2px 8px;
   border-radius: 20px;
-  background-color: #eea81b;
+  background-color: #6dff24;
 }
 
 section#rsvp .rsvp__comment .card__item .kehadiran.success {
@@ -1399,7 +1433,7 @@ section#kisah .card .timeline .event:after {
   -webkit-box-shadow: 0 0 0 3px #d3991d;
           box-shadow: 0 0 0 3px #d3991d;
   left: -55px;
-  background: #fcf0d9;
+  background: #f5fff0;
   border-radius: 50%;
   height: 11px;
   width: 11px;
@@ -1534,7 +1568,7 @@ section#prokes .card__item ol li {
 }
 
 #credit {
-  background-color: #fae7c1;
+  background-color: #e4ffd6;
 }
 
 #credit .card__title {
@@ -1639,30 +1673,30 @@ section#quote .card {
   padding: 0 2rem;
 }
 
-section#quote .card__content {
+section#quote .card__item {
   background-color: white;
   border-radius: 6px;
   padding: 1rem;
 }
 
-section#quote .card__content blockquote {
+section#quote .card__item blockquote {
   font-size: 0.87rem;
   line-height: 1.6;
 }
 
-section#quote .card__content blockquote .quote {
+section#quote .card__item blockquote .quote {
   font-size: 2.1rem;
 }
 
-section#quote .card__content blockquote::before {
+section#quote .card__item blockquote::before {
   content: open-quote;
 }
 
-section#quote .card__content blockquote::after {
+section#quote .card__item blockquote::after {
   content: close-quote;
 }
 
-section#quote .card__content footer {
+section#quote .card footer {
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: block;

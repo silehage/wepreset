@@ -20,7 +20,7 @@ class Animate {
   in(node, animation = 'fadeInUp', prefix = 'animate__',){
 
     new Promise((resolve, reject) => {
-      node.style.opacity = 1
+      // node.style.opacity = 1
       const animationName = `${prefix}${animation}`;
       node.classList.add(`${prefix}animated`, animationName);
 

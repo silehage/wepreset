@@ -336,11 +336,20 @@ h6.title {
 .is__modal #content,
 .is__modal #main {
   overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .is__modal .panel__first {
+  position: relative;
   width: 100%;
   opacity: .5;
+}
+
+.is__modal .panel__second {
+  width: 100%;
 }
 
 .is__modal .hero__content {
@@ -430,6 +439,7 @@ h6.title {
 }
 
 #welcome .divider {
+  display: none;
   width: 100%;
   height: 30px;
   margin-top: 1.6rem;
@@ -462,41 +472,70 @@ h6.title {
   margin: auto;
 }
 
-#welcome .modal__item .title {
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #f07f81;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+#welcome .modal__item:not(:first-child) {
+  margin-top: 1rem;
 }
 
-#welcome .modal__item .image {
+#welcome .modal__item.header > *:not(:first-child) {
+  margin-top: 1rem;
+}
+
+#welcome .modal__item.header .text {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+#welcome .modal__item.header .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 2px;
+}
+
+#welcome .modal__item.header .name > *:not(:first-child) {
+  margin-left: .4rem;
+}
+
+#welcome .modal__item.header .image {
   width: 220px;
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 20px;
   min-width: 200px;
   border: 8px solid white;
   -webkit-box-shadow: -5px 2px 29px -10px;
           box-shadow: -5px 2px 29px -10px;
 }
 
-#welcome .modal__item .description {
+#welcome .modal__item.body .description {
   line-height: 1.5;
-  max-width: 400px;
-  font-size: 14px;
+  max-width: 450px;
+  font-size: 13px;
   color: #bf8889;
 }
 
-#welcome .modal__item button {
-  margin: 1.5rem auto .5rem;
-  padding: .7rem 3rem;
-}
-
-#welcome .modal__item .bottom__text {
+#welcome .modal__item.body .text {
   font-size: 11px;
   color: #bf8889;
+}
+
+#welcome .modal__item.action button {
+  padding: .6rem 2.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.95rem;
+}
+
+#welcome .modal__item.action button .icon {
+  margin-right: .4rem;
 }
 
 #welcome::before {
@@ -777,7 +816,7 @@ section#gallery .card__content > * {
   }
 }
 
-section#gallery .card__item .img {
+section#gallery .card__img img {
   width: 100%;
   height: auto;
   border: 6px solid white;
@@ -1390,7 +1429,7 @@ section#prokes .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90%;
+  width: 75%;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;

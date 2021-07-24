@@ -29,8 +29,8 @@ section#gallery {
         }
 
       }
-    &__item {
-      .img {
+    &__img {
+      img {
         width:100%;
         height:auto;
         border:6px solid white;

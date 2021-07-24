@@ -12,12 +12,13 @@
   padding-bottom:1.5rem;
 
   .divider {
+    display:none;
     width: 100%;
-    height: 40px;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+    height: 30px;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
     &::before{
-      height: 40px;
+      height: 30px;
     }
   }
   .modal {
@@ -35,52 +36,69 @@
       margin:auto
   
     }
+     &__item:not(:first-child) {
+      margin-top:1rem;
+    }
     &__item {
-      .title {
-        text-transform: uppercase;
-        font-weight: 600;
-        color: rgb(0, 141, 94);
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-      }
-
-      .image {
-        width:220px;
-        height:150px;
-        object-fit: cover;
-        margin-bottom: 20px;
-        min-width: 200px;
-        border: 8px solid white;
-        box-shadow: -5px 2px 29px -10px;
-      }
-
-      .description {
-        line-height: 1.5;
-        max-width: 400px;
-        font-size: 14px;
-        color: rgb(90, 114, 106);
-      }
       
-      button {
-        margin:1.5rem auto .5rem;
-        padding:.7rem 3rem;
-        background-color: $info;
-        border:1px solid lighten($info, 5);
-        color: lighten($info, 60);
-        font-weight: 600;
-        border-radius: 5px;
-        transition: all .3s ease-in-out;
-        
-        &:hover,
-        &:focus {
-          background-color: darken($info, 5);
-          color: lighten($info, 90);
+      &.header {
+        & > *:not(:first-child){
+          margin-top:1rem;
+        }
+        .text {
+          font-weight: $bold;
+          font-size: $h6;
+        }
+        .name { 
+          & > *:not(:first-child){
+            margin-left:.4rem;
+          }
+          display: flex;
+          justify-content: center;
+          font-family: $secondaryFont;
+          letter-spacing: 2px;
+
+        }
+        .image {
+          width:220px;
+          height:150px;
+          object-fit: cover;
+          min-width: 200px;
+          border: 8px solid white;
+          box-shadow: -5px 2px 29px -10px;
         }
       }
-      .bottom__text{
-        font-size: 11px;
-        color: rgb(90, 114, 106);
+      &.body {
+        .title {
+          font-size: $h5;
+        }
+        .label {
+          font-size: $p1;
+        }
+        .description{
+          line-height: 1.4;
+          font-size: 12.5px;
+          color: lighten($baseColor, 10);
+        }
+        .text{
+          font-size: 11px;
+           color: lighten($baseColor, 10);
+        }
       }
+      &.action {
+        button {
+          padding:.6rem 2.6rem;
+          display:flex;
+          align-items: center;
+          font-size: $p1;
+          .icon {
+            margin-right: .4rem;
+          }
+        }
+      }
+
+
+      
     }
   }
 

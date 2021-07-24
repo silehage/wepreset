@@ -16,11 +16,9 @@ const animate = new Animate();
 */
 let is__modal = false;
 let is__fulscreen = false;
-let featuredImage = null
 
 const welcomeModal = document.getElementById('welcome');
 if(welcomeModal) {
-  featuredImage = welcomeModal.querySelector('img')
   document.body.classList.add('is__modal')
   welcomeModal.querySelector('#welcome__btn').addEventListener('click', welcomeModalOut)
   is__modal = true
@@ -63,16 +61,14 @@ function openFullscreen() {
 
 /** select all section with .section class to be animated */
 
-let title = [];
-let subtitle = [];
-let cardItem = [];
-
+let elem = [];
 const panelSecond = document.querySelector('.panel__second')
-if(panelSecond){
-  title = panelSecond.querySelectorAll('.card__title')
-  subtitle = panelSecond.querySelectorAll('.card__subtitle')
-  cardItem = panelSecond.querySelectorAll('.card__item')
-}
+let title = document.querySelectorAll('.card__title');
+let subtitle = document.querySelectorAll('.card__subtitle');
+let item = document.querySelectorAll('.card__item');
+let divider = document.querySelectorAll('.divider');
+
+let randomAnimateIn = ['fadeInUp', 'fadeInUpBig', 'fadeInLeft', 'fadeInRight', 'fadeInUp', 'fadeInBootomLeft', 'fadeInBottomRight'];
 
 /**  Aimation options */
 const options = {
@@ -83,16 +79,18 @@ const options = {
 }
 
 /** looping element */ 
-title.forEach(el => {
+Array.from(title).forEach(el => {
   animate.lazyContent(el, options)
 })
-subtitle.forEach(el => {
+Array.from(subtitle).forEach(el => {
   animate.lazyContent(el, options)
 })
-cardItem.forEach(el => {
+Array.from(item).forEach(el => {
   animate.lazyContent(el, options)
 })
-
+Array.from(divider).forEach(el => {
+  animate.lazyContent(el, options)
+})
 
 /**
  * Lazy Image Photo gallery
@@ -221,14 +219,4 @@ function prokesAnimateOut () {
     setTimeout(() => {
       prokesContainer.style.display = 'none'
     },1500)
-}
-
-if(featuredImage) {
-  // document.getElementById('home').style.setProperty('--featured-image',  `url(${featuredImage.src})`)
-  let box = document.createElement('div')
-  let style = 'height:100%; width:100%; position:absolute; left:0; top:0; background-position: center top; background-repeat: no-repeat; background-size: cover; opacity: .3; -webkit-transition: background 1s; -moz-transition: background 1s; -o-transition: background 1s; transition: background 1s;';
-  box.style.cssText= style
-  box.style.backgroundImage = `url(${featuredImage.src})`
-  let home =  document.getElementById('home')
-  home.insertBefore(box, home.firstChild)
 }

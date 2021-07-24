@@ -106,16 +106,14 @@ h6.title {
   #content,
   #main {
     overflow:hidden;
-    flex-direction: column;
   }
   .panel {
     &__first {
-      position:relative;
+      // position:relative;
       width:100%;
       opacity: .5;
     }
     &__second {
-      width:100%;
     }
   }
   .hero__content {
@@ -151,7 +149,7 @@ h6.title {
 
 @media only screen and (min-width: 992px){
   .flex {
-    flex-direction: row;
+    flex-direction: column;
   }
   .panel {
 
@@ -162,12 +160,10 @@ h6.title {
       bottom: 0;
       position: fixed;
       padding: 0;
-      width: $fisrtPanel;
       height: 100%;
     }
 
     &__second {
-      width: $secondPanel;
       margin-left: auto;
       text-align: center;
     }
