@@ -22,7 +22,7 @@ button {
   cursor: pointer;
   padding:.7em 2em;
   font-size: $p3;
-  background-color: lighten($secondary, 6);
+  background-color: lighten($accent, 6);
   text-decoration: none;
   border-radius: 5px;
   color: white;
@@ -32,15 +32,33 @@ button {
   &:focus,
   &:active {
     outline: none;
-    background-color:$secondary;
+    background-color:$accent;
     color: darken(white,3);
 
   }
 }
 
 main {
-  background-color: $backgroundColor;
+  background-color: hsl(0, 0%, 100%);
   overflow-x: hidden;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    content: '';
+    background-image: url('./asset/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+    opacity:.3;
+  }
+
 }
 strong {
   font-weight: 600;
@@ -65,14 +83,17 @@ h5.title {
 h6.title {
   font-size: $h6;
 }
-.card {
+.section {
   padding-top: 3rem;
   padding-bottom: 3rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.card {
+  max-width: 1024px;
   width:100%;
-  max-width: 700px;
   margin:auto;
+  width:100%;
   overflow: hidden;
 
   &__content {
@@ -90,7 +111,8 @@ h6.title {
     font-size: $p2;
     color:lighten($baseColor, 5);
     line-height: 1.6;
-    max-width:370px;
+    max-width:90%;
+    max-width: 600px;
     margin:auto;
   }
  
@@ -129,10 +151,11 @@ h6.title {
   display: flex;
   flex-direction: column;
 }
-
+ 
 .panel {
   &__first {
     position:relative;
+    height: calc(100vh - 59px);
     width:100%;
     overflow: hidden;
   }
@@ -140,51 +163,8 @@ h6.title {
     position: relative;
     width:100%;
     text-align: center;
-    background-color: $backgroundColor;
     overflow: hidden;
+    padding-bottom: 3rem;
   }
 }
 
-// Responsive
-
-@media only screen and (min-width: 992px){
-  .flex {
-    flex-direction: column;
-  }
-  .panel {
-
-    &__first {
-      overflow: hidden;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      position: fixed;
-      padding: 0;
-      height: 100%;
-    }
-
-    &__second {
-      margin-left: auto;
-      text-align: center;
-    }
-  }
-}
-@media only screen and (max-width: 991px){
-  .panel {
-    &__first {
-      height: calc(100vh - 59px)
-    }
-    &__second {
-      padding-bottom: 3rem;
-    }
-
-  }
-  .is__modal {
-    .panel {
-      &__first {
-        height: 100vh;
-      }
-    }
-  }
-
-}

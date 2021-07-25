@@ -16,9 +16,11 @@ const animate = new Animate();
 */
 let is__modal = false;
 let is__fulscreen = false;
+let featuredImage = null
 
 const welcomeModal = document.getElementById('welcome');
 if(welcomeModal) {
+  featuredImage = welcomeModal.querySelector('img')
   document.body.classList.add('is__modal')
   welcomeModal.querySelector('#welcome__btn').addEventListener('click', welcomeModalOut)
   is__modal = true
@@ -200,23 +202,40 @@ function prokesAnimScroll() {
 }
 function prokesAnimateIn () {
    if(!prokesContainer) return
-    prokesContainer.style.position = 'fixed'
-    prokesContainer.style.opacity = 1
-    prokesContainer.style.zIndex = 350
+    prokesContainer.style.cssText = 'position:fixed;opacity:1;z-index:350';
     document.body.classList.add('no-scroll')
     setTimeout(() => {
-      animate.modal(prokesCard, 'bounceInDown')
-    },300)
+      animate.modal(prokesCard, 'zoomIn')
+    },0)
     has__popup = true
+
 }
 function prokesAnimateOut () {
-   animate.out(prokesCard, animate.getRandomOut())
-    setTimeout(() => {
-      prokesContainer.style.opacity = 0
-      prokesContainer.style.zIndex = -1
-      document.body.classList.remove('no-scroll')
-    },700)
-    setTimeout(() => {
-      prokesContainer.style.display = 'none'
-    },1500)
+
+    new Promise((resolve, reject) => {
+
+        animate.out(prokesCard, 'zoomOut')
+
+       function handleAnimationEnd(event) {
+          event.stopPropagation();
+          prokesContainer.style.opacity = 0
+          document.body.classList.remove('no-scroll')
+          setTimeout(() => {
+            prokesContainer.style.display = 'none'
+          },500)
+          resolve('Animation In ended');
+        }
+
+       prokesCard.addEventListener('animationend', handleAnimationEnd, {once: true});
+    }) 
+}
+
+if(featuredImage) {
+  // document.getElementById('home').style.setProperty('--featured-image',  `url(${featuredImage.src})`)
+  let box = document.createElement('div')
+  let style = 'height:100%; width:100%; position:absolute; left:0; top:0; background-position: center center; background-attachment:fixed;background-repeat: no-repeat; background-size: cover; opacity: .3; -webkit-transition: background 1s; -moz-transition: background 1s; -o-transition: background 1s; transition: background 1s;';
+  box.style.cssText= style
+  box.style.backgroundImage = `url(${featuredImage.src})`
+  let home =  document.getElementById('home')
+  home.insertBefore(box, home.firstChild)
 }

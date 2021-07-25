@@ -6,7 +6,7 @@ div#tab__menu {
   bottom:0;
   left:0;
   width:100%;
-  background-color: rgb(255, 255, 255);
+  background-color: hsla(0, 0%, 100%, 0.7);
   z-index:300;
   box-shadow: 0px -1px 12px -8px #7b7b7b;
   font-size: 10px;
@@ -14,13 +14,14 @@ div#tab__menu {
   opacity: 1;
   transition: transform .4s ease-in-out;
   transform: translateY(0);
+  backdrop-filter: blur(10px);
   
   .tab {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color:$secondary;
+    color:$accent;
     text-decoration: none;
     &__icon {
       width:20px;
@@ -29,20 +30,25 @@ div#tab__menu {
     &:hover,
     &:focus,
     &:active {
-      color: darken($secondary, 10)
+      color: darken($accent, 10)
     }
   }
 }
 
-@media only screen and (min-width: 992px){
-  div#tab__menu {
-    display: none;
-  }
-  
-}
 .is__modal {
   div#tab__menu {
     transform: translateY(100%);
     opacity:0;
   }
+}
+@media only screen and (min-width: 768px) {
+  div#tab__menu  {
+    justify-content: center;
+    margin: 0;
+    .tab {
+      margin:0 1rem;
+      font-size: $p3;
+    }
+  }
+  
 }

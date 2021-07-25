@@ -9,6 +9,7 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: hsl(0, 0%, 3%);
 
   .ornament {
     width: 100%;
@@ -59,8 +60,9 @@
     &__item {
 
       &.text {
-        color: $baseColor;
+        color: $light;
         margin:8px auto;
+        font-size: $h6;
       }
       &.heading { 
         text-align: center;

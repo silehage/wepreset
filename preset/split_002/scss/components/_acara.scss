@@ -17,6 +17,18 @@ section#acara {
       padding:2rem;
       
     }
+    .data__mempelai {
+      .sparator {
+        margin:1.5rem auto;
+        font-size: $h5;
+        color: $primary;
+        font-weight: $bold;
+        font-family: $secondaryFont;
+      }
+    }
+    .data__event {
+      margin-top: 3rem;;
+    }
 
     &__item {
       border-radius: 16px;

@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Great+Vibes&display=swap');
 
 // Base
-$backgroundColor: hsl(100, 100%, 97%); // Background color
-$baseColor: hsl(34, 61%, 39%); // Body text color
+$backgroundColor: hsl(356, 100%, 97%); // Background color
+$baseColor: hsl(0, 11%, 44%); // Body text color
 $baseText: 16px; // Body font size
 
 $mainFont:  'Montserrat', sans-serif; // Main font family
@@ -11,8 +11,9 @@ $secondaryFont: 'Great Vibes', cursive;
 
 // Color 
 $primary: hsl(325, 84%, 43%); 
-$secondary: hsl(41, 76%, 37%);
+$secondary: hsl(192, 76%, 37%);
 $success: hsl(123, 96%, 33%);
+$accent: hsl(0, 79%, 72%);
 $info: hsl(194, 96%, 33%);
 $error: hsl(7, 97%, 38%);
 $disabled: hsl(0, 0%, 50%);

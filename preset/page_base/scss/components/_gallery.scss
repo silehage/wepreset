@@ -8,18 +8,24 @@ section#gallery {
     &__subtitle {
       font-size: $p2;
     }
-
+    
     &__content {
-        margin-top: 1rem;
-        --gap: .3rem;
-        --columns: 2;
-        display: column;
-        columns: var(--columns);
-        gap:var(--gap);
-        
-        & > * {
-          break-inside: avoid;
-          // margin-bottom: var(--gap);
+      margin-top: 1rem;
+      --gap: .3rem;
+      --columns: 2;
+      display: column;
+      columns: var(--columns);
+      gap:var(--gap);
+      
+      & > * {
+        break-inside: avoid;
+        // margin-bottom: var(--gap);
+      }
+        @media only screen and (min-width:768px) {
+          --columns:3;
+        }
+        @media only screen and (min-width:1024px) {
+          --columns:4;
         }
 
         @supports(grid-template-rows: masonry) {

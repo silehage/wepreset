@@ -9,7 +9,6 @@ section#savedate {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        color: $secondary;
       }
       &__block {
         display: flex;
@@ -28,7 +27,6 @@ section#savedate {
           display: flex;
           width: 100%;
           font-weight: $bold;
-          color: $primary;
 
           .label {
             margin-left: .7rem;

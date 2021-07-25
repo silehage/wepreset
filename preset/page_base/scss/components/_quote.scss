@@ -1,8 +1,9 @@
 section#quote{
+  padding-top:0;
   .card {
-    padding: 0 2rem;
+    max-width: 800px;
     &__item {
-      background-color: white;
+      background-color: rgba(white, .6);
       border-radius: 6px;
       padding:1rem;
       blockquote {

@@ -106,14 +106,16 @@ h6.title {
   #content,
   #main {
     overflow:hidden;
+    flex-direction: column;
   }
   .panel {
     &__first {
-      // position:relative;
+      position:relative;
       width:100%;
       opacity: .5;
     }
     &__second {
+      width: 100%;
     }
   }
   .hero__content {

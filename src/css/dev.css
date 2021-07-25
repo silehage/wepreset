@@ -8,18 +8,10 @@
   z-index: 1;
 }
 
-.is__dev #welcome::before {
-  display: none;
-}
-
 .is__dev section#prokes {
   position: relative;
   opacity: 1;
   height: auto;
-}
-
-.is__dev section#prokes::before {
-  display: none;
 }
 
 .is__dev section#prokes .card {
