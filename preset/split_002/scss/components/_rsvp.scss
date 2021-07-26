@@ -104,9 +104,9 @@ section#rsvp {
             padding: inherit;
             display: inline-flex;
             justify-content: center;
-            align-items: start;
+            align-items: center;
             font-weight: 600;
-            line-height: 1.3rem;
+            // line-height: 1.3rem;
   
             &:hover {
               background-color: lighten($secondary, 35);

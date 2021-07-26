@@ -30,31 +30,26 @@ section#angpao {
         
         .title {
           position: relative;
+          color:$primary;
+          font-size: $p;
         }
 
       }
       .card__item {
         margin:1rem;
-        padding:1rem;
+        padding:.5rem;
 
         & > *:not(:first-child) {
           margin-top: .5rem;
         }
-        .title {
-          font-size: $p;
-          font-weight: $bold;
-        }
-  
+
         .provider {
-          font-weight: $bold;
-          font-size: $p;
+          font-size: $p1;
         }
         .value{
           font-size: $h6;
           font-weight: $bold;
-        }
-        .cabang{
-          font-size: $p2;
+          letter-spacing: 1px;
         }
         .akun {
           font-size: $p3;

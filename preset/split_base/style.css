@@ -679,15 +679,15 @@ section#intro .card__item {
   padding: 1rem;
 }
 
-/**
-** Section Acara
-**/
-section#acara .card__title {
-  font-size: 1.3rem;
-  font-family: "Montserrat", sans-serif;
+section#acara .data__mempelai .card {
+  max-width: 700px;
 }
 
-section#acara .card__content {
+section#acara .data__mempelai .card__title {
+  font-size: 2.1rem;
+}
+
+section#acara .data__mempelai .card__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -698,45 +698,104 @@ section#acara .card__content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem;
 }
 
-section#acara .card__item {
+section#acara .data__mempelai .card__item {
   border-radius: 16px;
-  width: 100%;
-  max-width: 350px;
-  margin-bottom: .5rem;
-  margin-top: .5rem;
 }
 
-section#acara .card__item .title {
+section#acara .data__mempelai .card__item .sparator {
+  margin: 1rem auto;
+  color: rgba(128, 128, 128, 0.8);
+}
+
+section#acara .data__mempelai .card__item .title {
   color: #ca127d;
   font-weight: 600;
   font-family: "Great Vibes", cursive;
   margin: .5rem auto;
+  font-size: 2.7rem;
 }
 
-section#acara .card__item .description {
+section#acara .data__mempelai .card__item .description {
   font-size: 0.78rem;
   color: rgba(128, 128, 128, 0.8);
 }
 
-section#acara .card__item .sparator {
-  color: rgba(128, 128, 128, 0.8);
+section#acara .data__event .card {
+  width: 100%;
+  padding-top: 0;
 }
 
-section#acara .card__item .tanggal {
+section#acara .data__event .card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#acara .data__event .card__item {
+  margin: 1rem;
+}
+
+section#acara .data__event .card__item .title {
+  color: #ca127d;
   font-weight: 600;
+  margin: .5rem auto;
+  font-size: 1.1rem;
 }
 
-section#acara .card__item .jam {
+section#acara .data__event .card__item .tanggal {
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#acara .data__event .card__item .tanggal .svg_icon {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+section#acara .data__event .card__item .jam {
   font-weight: 400;
-  font-size: 0.83rem;
+  font-size: 0.95rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-section#acara .card__item .tempat {
-  font-size: 0.87rem;
-  padding: 0.87rem;
+section#acara .data__event .card__item .jam .svg_icon {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+section#acara .data__event .card__item .tempat {
+  font-size: 0.95rem;
+  padding: 0.95rem;
+}
+
+section#acara .data__event .card__item .tempat .svg_icon {
+  width: 40px;
+  height: 40px;
 }
 
 #mempelai .card {
@@ -895,6 +954,12 @@ section#angpao .card__content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+section#angpao .card__content .header h5 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #ca127d;
 }
 
 section#angpao .card__content .card__item .title {

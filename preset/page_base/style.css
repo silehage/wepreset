@@ -323,7 +323,6 @@ h6.title {
   max-width: 1024px;
   width: 100%;
   margin: auto;
-  width: 100%;
   overflow: hidden;
 }
 
@@ -685,6 +684,8 @@ section#intro .card__item {
   font-size: 0.87rem;
   line-height: 1.6;
   padding: 1rem;
+  max-width: 600px;
+  margin: auto;
 }
 
 /**
@@ -709,6 +710,7 @@ section#acara .data__mempelai .card__content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 3rem 0;
 }
 
 section#acara .data__mempelai .card__item {
@@ -762,16 +764,51 @@ section#acara .data__event .card__item .title {
 
 section#acara .data__event .card__item .tanggal {
   font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#acara .data__event .card__item .tanggal .svg_icon {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
 }
 
 section#acara .data__event .card__item .jam {
   font-weight: 400;
   font-size: 0.95rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#acara .data__event .card__item .jam .svg_icon {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
 }
 
 section#acara .data__event .card__item .tempat {
   font-size: 0.95rem;
   padding: 0.95rem;
+}
+
+section#acara .data__event .card__item .tempat .svg_icon {
+  width: 50px;
+  height: 50px;
 }
 
 #mempelai {
@@ -1004,34 +1041,27 @@ section#angpao .card__content .header {
 
 section#angpao .card__content .header .title {
   position: relative;
+  color: #ca127d;
+  font-size: 1rem;
 }
 
 section#angpao .card__content .card__item {
   margin: 1rem;
-  padding: 1rem;
+  padding: .5rem;
 }
 
 section#angpao .card__content .card__item > *:not(:first-child) {
   margin-top: .5rem;
 }
 
-section#angpao .card__content .card__item .title {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
 section#angpao .card__content .card__item .provider {
-  font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 section#angpao .card__content .card__item .value {
   font-size: 1.1rem;
   font-weight: 600;
-}
-
-section#angpao .card__content .card__item .cabang {
-  font-size: 0.87rem;
+  letter-spacing: 1px;
 }
 
 section#angpao .card__content .card__item .akun {
@@ -1198,7 +1228,7 @@ section#rsvp .rsvp__comment {
 
 section#rsvp .rsvp__comment .card__header {
   --btn-width: 1.6rem;
-  --btn-height: 1.2rem;
+  --btn-height: 1.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1229,13 +1259,12 @@ section#rsvp .rsvp__comment .card__header .paginate__link {
   width: var(--btn-width);
   height: var(--btn-height);
   padding: inherit;
-  line-height: .9rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1495,7 +1524,6 @@ section#kisah {
   --timeline-width: 90%;
   --justify-content: center;
   --space-left: 3rem;
-  padding: 5px;
 }
 
 section#kisah .card__content {

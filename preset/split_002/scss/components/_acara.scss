@@ -4,63 +4,99 @@
 
 section#acara {
 
-  .card {
+  .data__mempelai {
 
-    &__title {
-      font-size: $h3;
-    }
+    .card {
+      max-width: 700px;
 
-    &__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding:2rem;
+      &__title {
+        font-size: $h3;
+      }
       
-    }
-    .data__mempelai {
-      .sparator {
-        margin:1.5rem auto;
-        font-size: $h5;
-        color: $primary;
-        font-weight: $bold;
-        font-family: $secondaryFont;
-      }
-    }
-    .data__event {
-      margin-top: 3rem;;
-    }
-
-    &__item {
-      border-radius: 16px;
-      width:100%;
-      max-width:350px;
-      margin-bottom: .5rem;
-      margin-top: .5rem;
-
-      .title {
-        color: $primary;
-        font-weight: $bold;
-        font-family: $secondaryFont;
-        letter-spacing: 1px;
-      }
-      .description {
-        font-size: $p3;
-        margin: .5rem 0;
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
       }
 
+      &__item {
+        border-radius: 16px;
+        .sparator {
+          margin:1rem auto;
+          color: rgba($grey, .8);
+        }
+        .title {
+          color: $primary;
+          font-weight: $bold;
+          font-family: $secondaryFont;
+          margin:.5rem auto;
+          font-size: $h2;
+        }
+        .description {
+          font-size: $p4;
+          color: rgba($grey, .8);
+        }
+      }
+    
+    }
+  }
+  .data__event {
+    
+    .card {
+      width: 100%;
+      padding-top:0;
 
-      .tanggal {
-        font-weight: $bold;
+      &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
       }
-      .jam {
-        font-weight: $semibold;
-        font-size: $p3;
-      }
-      .tempat {
-        font-size: $p2;
-        padding: $p2;
+
+      &__item {
+        margin:1rem;
+
+        .title {
+          color: $primary;
+          font-weight: $bold;
+          margin:.5rem auto;
+          font-size: $h6;
+        }
+        .tanggal {
+          font-weight: $bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .svg_icon {
+            margin-right:5px;
+            width:16px;
+            height: 16px;
+          }
+        }
+        .jam {
+          font-weight: $semibold;
+          font-size: $p1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .svg_icon {
+            margin-right:5px;
+            width:16px;
+            height: 16px;
+          }
+        }
+        .tempat {
+          font-size: $p1;
+          padding: $p1;
+
+          .svg_icon {
+            width:40px;
+            height: 40px;
+          }
+        }
       }
     }
+
 
   }
 }

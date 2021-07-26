@@ -27,6 +27,13 @@ section#angpao {
       margin-top: 1rem;
       display: flex;
       flex-direction: column;
+      .header {
+        h5 {
+          font-size: $h6;
+          margin-bottom: 1rem;
+          color:$primary;
+        }
+      }
       .card__item {
         .title {
           font-size: $p;

@@ -17,6 +17,7 @@ section#acara {
         display: flex;
         flex-direction: column;
         align-items: center; 
+        padding: 3rem 0;
       }
 
       &__item {
@@ -64,14 +65,35 @@ section#acara {
         }
         .tanggal {
           font-weight: $bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .svg_icon {
+            margin-right:5px;
+            width:20px;
+            height: 20px;
+          }
         }
         .jam {
           font-weight: $semibold;
           font-size: $p1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .svg_icon {
+            margin-right:5px;
+            width:20px;
+            height: 20px;
+          }
         }
         .tempat {
           font-size: $p1;
           padding: $p1;
+
+          .svg_icon {
+            width:50px;
+            height: 50px;
+          }
         }
       }
     }

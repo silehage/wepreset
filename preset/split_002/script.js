@@ -232,3 +232,15 @@ if(featuredImage) {
   let home =  document.getElementById('home')
   home.insertBefore(box, home.firstChild)
 }
+
+function insertSvg(node, svg) {
+  let elem = document.querySelectorAll(node)
+  if(!elem.length) return
+  elem.forEach(el => {
+    let span = document.createElement('span')
+    span.classList.add('icon')
+    span.style.marginRight = '4px'
+    span.innerHTML= svg
+    el.insertBefore(span, el.firstChild)
+  })
+}
