@@ -1,2 +1,1 @@
-#wesmpl
-Hanya sample halaman
+Contoh preset

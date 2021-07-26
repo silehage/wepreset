@@ -295,11 +295,11 @@ h6.title {
   font-size: 1.1rem;
 }
 
+.section {
+  padding: 2rem 1rem;
+}
+
 .card {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   width: 100%;
   max-width: 700px;
   margin: auto;
@@ -654,6 +654,7 @@ section#intro {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 100vh;
 }
 
 section#intro .card__content {
@@ -778,10 +779,7 @@ section#acara .card__item .tempat {
   display: block;
   width: 100%;
   height: 80px;
-}
-
-.divider.padding {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 

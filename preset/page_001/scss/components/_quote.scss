@@ -1,0 +1,32 @@
+section#quote{
+  padding-top:0;
+  .card {
+    max-width: 800px;
+    &__item {
+      background-color: rgba(white, .6);
+      border-radius: 6px;
+      padding:1rem;
+      blockquote {
+        font-size: $p2;
+        .quote {
+          font-size: $h3;
+        }
+        line-height: 1.6;
+
+        &::before{
+          content: open-quote;
+        }
+        &::after{
+          content: close-quote;
+        }
+      }
+    }
+    footer {
+      margin-top:1rem;
+      margin-bottom:1rem;
+      display:block;
+      font-weight: $bold;
+      font-size: $p;
+    }
+  }
+}
