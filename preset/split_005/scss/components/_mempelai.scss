@@ -1,0 +1,41 @@
+#mempelai {
+  .card {
+    --card-img-height:160px;
+    --card-img-width:190px;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top:2rem;
+      margin-bottom: 2rem;
+
+      .image {
+        width:var(--card-img-width);
+        height:var(--card-img-height);
+        overflow:hidden;
+        border-radius: 10px;
+        border:5px solid #fff;
+        box-shadow:-4px 3px 19px -10px #333;
+    
+        img {
+          width: 100%;
+          height:auto;
+        }
+
+      }
+
+      .title {
+        font-size: $h5;
+        margin-top: 1rem;
+        color: $primary;
+        font-weight: $bold;
+      }
+      
+      .description {
+        font-size: $p3;
+        padding: .5rem;
+      }
+
+    }
+  }
+}

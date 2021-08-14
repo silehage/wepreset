@@ -506,12 +506,22 @@ h6 {
 #welcome .modal__item.header .image {
   width: 220px;
   height: 150px;
-  -o-object-fit: cover;
-     object-fit: cover;
   min-width: 200px;
   border: 8px solid white;
   -webkit-box-shadow: -5px 2px 29px -10px;
           box-shadow: -5px 2px 29px -10px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#welcome .modal__item.header .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
 }
 
 #welcome .modal__item.body .title {
@@ -596,26 +606,26 @@ h6 {
   background-repeat: no-repeat;
 }
 
-.home .ornament__item.left-top {
+.home .ornament__item.top-left {
   background-image: url("./asset/hero_left-top.png");
   background-position: left top;
   left: 0;
   top: 0;
 }
 
-.home .ornament__item.right-top {
+.home .ornament__item.top-right {
   background-position: right top;
   right: 0;
   top: 0;
 }
 
-.home .ornament__item.left-bottom {
+.home .ornament__item.bottom-left {
   background-position: left bottom;
   left: 0;
   bottom: 0;
 }
 
-.home .ornament__item.right-bottom {
+.home .ornament__item.bottom-right {
   background-image: url("./asset/hero_right-bottom.png");
   background-position: right bottom;
   right: 0;
@@ -760,6 +770,7 @@ section#acara .data__event .card__item .tanggal {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: .6rem;
 }
 
 section#acara .data__event .card__item .tanggal .svg_icon {
@@ -945,6 +956,10 @@ section#angpao .card__item:not(:last-child) {
   margin-bottom: 1.4rem;
 }
 
+section#angpao .card__item > *:not(:last-child) {
+  margin-bottom: .6rem;
+}
+
 section#angpao .card__content {
   margin-top: 1rem;
   display: -webkit-box;
@@ -975,16 +990,19 @@ section#angpao .card__content .card__item .provider {
 section#angpao .card__content .card__item .value {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: .3rem;
 }
 
 section#angpao .card__content .card__item .cabang {
   font-size: 0.87rem;
-  margin-bottom: .3rem;
 }
 
 section#angpao .card__content .card__item .akun {
   font-size: 0.83rem;
+}
+
+section#angpao .card__content .card__item button {
+  padding: 5px 10px;
+  font-size: 11px;
 }
 
 section#angpao .card__content .card__item img {
@@ -1131,7 +1149,7 @@ section#rsvp .rsvp__comment {
 
 section#rsvp .rsvp__comment .card__header {
   --btn-width: 1.6rem;
-  --btn-height: 1.2rem;
+  --btn-height: 1.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1162,13 +1180,12 @@ section#rsvp .rsvp__comment .card__header .paginate__link {
   width: var(--btn-width);
   height: var(--btn-height);
   padding: inherit;
-  line-height: .9rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1536,14 +1553,25 @@ section#prokes .card__content {
 }
 
 section#prokes .card__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.4rem;
+  height: 1.4rem;
   top: 0;
   right: 0;
-  background-color: brown;
+  background-color: #cf1818;
   color: white;
   text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -1671,13 +1699,22 @@ section#savedate .card .countdown__block {
 }
 
 section#savedate .card .countdown__item {
-  padding: 3px 8px;
+  padding: 3px 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+section#savedate .card .countdown__item .digit {
+  font-size: 1.7rem;
+}
+
+section#savedate .card .countdown__item .label {
+  font-size: 1rem;
+  margin-left: 3px;
 }
 
 section#savedate .card .countdown__item.day {
@@ -1690,21 +1727,12 @@ section#savedate .card .countdown__item.day {
 }
 
 section#savedate .card .countdown__item.day .label {
-  margin-left: .7rem;
+  margin-left: .5rem;
   font-size: 3.5rem;
 }
 
 section#savedate .card .countdown__item.day .digit {
   font-size: 3.5rem;
-}
-
-section#savedate .card .countdown__item .digit {
-  font-size: 1.7rem;
-}
-
-section#savedate .card .countdown__item .label {
-  font-size: 1rem;
-  margin-left: .5rem;
 }
 
 section#savedate .card .countdown__endtext {

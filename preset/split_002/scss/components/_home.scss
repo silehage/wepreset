@@ -1,5 +1,4 @@
 section#home {
-  --featured-image:none;
   position: relative;
   display: flex;
   justify-content: center;
@@ -9,20 +8,20 @@ section#home {
   position:relative;
   background-color:#2b1d1d;
 
-  // &::before{
-  //   content: '';
-  //   background-image: var(--featured-image);
-  //   height:100%;
-  //   width:100%;
-  //   position:absolute;
-  //   left:0;
-  //   top:0;
-  //   background-position: center top;
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  //   opacity: .3;
+  &::before{
+    content: '';
+    background-image: var(--bg-image);
+    height:100%;
+    width:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .3;
     
-  // }
+  }
 
   .ornament {
     width: 100%;
@@ -36,26 +35,26 @@ section#home {
       background-size: contain;
       background-repeat: no-repeat;
 
-      &.left-top {
+      &.top-left {
         //  background-image: url('./asset/hero_left-top.png');
         background-position: left top;
         left:0;
         top:0;
       }
-      &.right-top {
+      &.top-right {
         background-image: url('./asset/hero_right_top.png');
         background-position: right top;
         right:0;
         top:0;
         opacity: .5;
       }
-      &.left-bottom {
+      &.bottom-left {
         //  background-image: url('./asset/hero_left-bottom.png');
         background-position: left bottom;
         left:0;
         bottom: 0;
       }
-      &.right-bottom {
+      &.bottom-right {
         // background-image: url('./asset/hero_right-bottom.png');
         background-position: right bottom;
         right:0;

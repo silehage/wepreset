@@ -5,11 +5,22 @@
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  background-image: url('./asset/hero_bg-main.png');
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-color: hsl(0, 0%, 3%);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: var(--bg-image);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .4;
+  }
+
 
   .ornament {
     width: 100%;
@@ -23,25 +34,25 @@
       background-size: contain;
       background-repeat: no-repeat;
 
-      &.left-top {
+      &.top-left {
         background-image: url('./asset/hero_left-top.png');
         background-position: left top;
         left:0;
         top:0;
       }
-      &.right-top {
+      &.top-right {
         //  background-image: url('./asset/hero_right-top.png');
         background-position: right top;
         right:0;
         top:0;
       }
-      &.left-bottom {
+      &.bottom-left {
         //  background-image: url('./asset/hero_left-bottom.png');
         background-position: left bottom;
         left:0;
         bottom: 0;
       }
-      &.right-bottom {
+      &.bottom-right {
         background-image: url('./asset/hero_right-bottom.png');
         background-position: right bottom;
         right:0;
@@ -68,7 +79,7 @@
         text-align: center;
         font-family: $secondaryFont;
         font-size: $hero;
-        color: $primary;
+        color: white;
       }
     }
 

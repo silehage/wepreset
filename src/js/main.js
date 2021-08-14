@@ -19,7 +19,7 @@ class Animate {
 
   in(node, animation = 'fadeInUp', prefix = 'animate__',){
 
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       // node.style.opacity = 1
       const animationName = `${prefix}${animation}`;
       node.classList.add(`${prefix}animated`, animationName);
@@ -54,7 +54,7 @@ class Animate {
 
   out(node, animation = 'zoomOutDown', prefix = 'animate__',){
 
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       const animationName = `${prefix}${animation}`;
       node.classList.add(`${prefix}animated`, animationName);
 
@@ -71,14 +71,28 @@ class Animate {
 
   }
   setOut(node, animation){
-    const el = document.querySelector(node)
-    if(!el) return
-    this.out(el, animation)
+    return new Promise((resolve, reject) => {
+      const el = document.querySelector(node)
+      if(el) {
+        this.out(el, animation).then(() => {
+          resolve('Animation ready')
+        })
+      } else {
+        reject('Error, Node not found')
+      }
+    })
   }
   setIn(node, animation){
-    const el = document.querySelector(node)
-    if(!el) return
-    this.in(el, animation)
+    return new Promise((resolve, reject) => {
+      const el = document.querySelector(node)
+      if(el) {
+        this.in(el, animation).then(() => {
+          resolve('Animation ready')
+        })
+      } else {
+        reject('Error, Node not found')
+      }
+    })
   }
 
   getRandomOut() {
@@ -152,3 +166,5 @@ class Animate {
   }
 
 }
+
+

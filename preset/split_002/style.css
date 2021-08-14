@@ -502,13 +502,22 @@ h6.title {
 
 #welcome .modal__item.header .image {
   width: 220px;
-  height: 150px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  min-width: 200px;
+  height: 160px;
   border: 8px solid white;
   -webkit-box-shadow: -5px 2px 29px -10px;
           box-shadow: -5px 2px 29px -10px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#welcome .modal__item.header .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
 }
 
 #welcome .modal__item.body .description {
@@ -553,7 +562,6 @@ h6.title {
 }
 
 section#home {
-  --featured-image:none;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -570,6 +578,20 @@ section#home {
   background-color: #2b1d1d;
 }
 
+section#home::before {
+  content: '';
+  background-image: var(--bg-image);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .3;
+}
+
 section#home .ornament {
   width: 100%;
   height: 100%;
@@ -584,13 +606,13 @@ section#home .ornament__item {
   background-repeat: no-repeat;
 }
 
-section#home .ornament__item.left-top {
+section#home .ornament__item.top-left {
   background-position: left top;
   left: 0;
   top: 0;
 }
 
-section#home .ornament__item.right-top {
+section#home .ornament__item.top-right {
   background-image: url("./asset/hero_right_top.png");
   background-position: right top;
   right: 0;
@@ -598,13 +620,13 @@ section#home .ornament__item.right-top {
   opacity: .5;
 }
 
-section#home .ornament__item.left-bottom {
+section#home .ornament__item.bottom-left {
   background-position: left bottom;
   left: 0;
   bottom: 0;
 }
 
-section#home .ornament__item.right-bottom {
+section#home .ornament__item.bottom-right {
   background-position: right bottom;
   right: 0;
   bottom: 0;
@@ -919,6 +941,10 @@ section#angpao .card__subtitle {
   padding: 0 1rem;
 }
 
+section#angpao .card__item > *:not(:last-child) {
+  margin-bottom: .6rem;
+}
+
 section#angpao .card__content--header {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -937,12 +963,15 @@ section#angpao .card__content .card__item .provider {
 section#angpao .card__content .card__item .value {
   font-size: 1.1rem;
   font-weight: 400;
-  margin-bottom: .3rem;
 }
 
 section#angpao .card__content .card__item .text {
   font-size: 0.87rem;
-  margin-bottom: .3rem;
+}
+
+section#angpao .card__content .card__item button {
+  padding: 5px 10px;
+  font-size: 11px;
 }
 
 section#angpao .card__content .card__item .akun {
@@ -1518,16 +1547,27 @@ section#prokes .card__content {
 }
 
 section#prokes .card__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   width: 1.4rem;
   height: 1.4rem;
   top: 0;
   right: 0;
-  background-color: #bf1903;
+  background-color: #cf1818;
+  border-radius: 50%;
   color: white;
   text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 1.3rem;
 }
 
 section#prokes .card__image {

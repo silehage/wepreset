@@ -506,12 +506,22 @@ h6 {
 #welcome .modal__item.header .image {
   width: 220px;
   height: 150px;
-  -o-object-fit: cover;
-     object-fit: cover;
   min-width: 200px;
   border: 8px solid white;
   -webkit-box-shadow: -5px 2px 29px -10px;
           box-shadow: -5px 2px 29px -10px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#welcome .modal__item.header .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
 }
 
 #welcome .modal__item.body .title {
@@ -596,26 +606,26 @@ h6 {
   background-repeat: no-repeat;
 }
 
-.home .ornament__item.left-top {
+.home .ornament__item.top-left {
   background-image: url("./asset/hero_left-top.png");
   background-position: left top;
   left: 0;
   top: 0;
 }
 
-.home .ornament__item.right-top {
+.home .ornament__item.top-right {
   background-position: right top;
   right: 0;
   top: 0;
 }
 
-.home .ornament__item.left-bottom {
+.home .ornament__item.lbottom-left {
   background-position: left bottom;
   left: 0;
   bottom: 0;
 }
 
-.home .ornament__item.right-bottom {
+.home .ornament__item.bottom-right {
   background-image: url("./asset/hero_right-bottom.png");
   background-position: right bottom;
   right: 0;

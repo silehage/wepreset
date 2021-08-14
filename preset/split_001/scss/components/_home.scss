@@ -23,25 +23,25 @@
       background-size: contain;
       background-repeat: no-repeat;
 
-      &.left-top {
+      &.top-left {
         background-image: url('./asset/hero_left-top.png');
         background-position: left top;
         left:0;
         top:0;
       }
-      &.right-top {
+      &.top-right {
         //  background-image: url('./asset/hero_right-top.png');
         background-position: right top;
         right:0;
         top:0;
       }
-      &.left-bottom {
+      &.lbottom-left {
         //  background-image: url('./asset/hero_left-bottom.png');
         background-position: left bottom;
         left:0;
         bottom: 0;
       }
-      &.right-bottom {
+      &.bottom-right {
         background-image: url('./asset/hero_right-bottom.png');
         background-position: right bottom;
         right:0;

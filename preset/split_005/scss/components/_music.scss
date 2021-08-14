@@ -1,0 +1,86 @@
+#music {
+  --btn-height: 2.5rem;
+  position: fixed;
+  bottom:12%;
+  left:3%;
+  z-index:1000;
+  opacity: 1;
+  transition: transform .4s ease-in-out;
+  transform: translateX(0);
+  transition-delay: 200ms;
+  .play__btn {
+    background-color: lighten($secondary, 10);
+    width: var(--btn-height);
+    height: var(--btn-height);
+    border-radius: 50%;
+    padding: 5px 2px;
+    color:white;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+}
+/* ---------- Begin .rotating-border ---------- */
+@keyframes spin {
+  from {transform: translate(-50%, -50%) rotate(0);}
+  to   {transform: translate(-50%, -50%) rotate(360deg);}
+}
+.rotating-border {
+  --border-radius: 1rem;
+  --border-size: 0.5rem;
+  --border-bg: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+  --padding: 1rem;
+  
+  position: relative;
+  padding: calc(var(--padding) + var(--border-size));
+  border-radius: var(--border-radius);
+  display: inline-block;
+  
+  &::before {
+    content: '';
+    display: block;
+    background: var(--border-bg);
+    width: calc(100% * 1.1);
+    padding-bottom: calc(100% * 1.1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    z-index: -2;
+    animation: spin 5s linear infinite;
+  }
+  &--reverse::before{
+    animation-direction: reverse;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    inset: var(--border-size);
+    background: white;
+    z-index: -1;
+    border-radius: calc(var(--border-radius) - var(--border-size));
+  }
+}
+
+/* ---------- End .rotating-border ---------- */
+.rotating-border--black-yellow{
+  --border-radius: 100%;
+  --border-bg: conic-gradient(
+    #F0C400 0.1666turn, 
+    #967a00 0.1666turn 0.3333turn, 
+    #F0C400 0.3333turn 0.5turn, 
+    #967a00 0.5turn 0.6666turn, 
+    #F0C400 0.6666turn 0.8333turn, 
+    #967a00 0.8333turn
+  );
+  text-align: center;
+}
+.is__modal {
+  #music {
+    opacity:0;
+    transform: translateX(-100px);
+  }
+}

@@ -1,0 +1,26 @@
+section#livestreaming {
+  .card {
+    &__item {
+      padding:1rem;
+      margin-bottom: .5rem;
+      margin-top: .5rem;
+      .heading {
+        font-size: $h6;
+        margin-bottom: .5rem;
+      }
+      .thumbnail {
+        img {
+          width: auto;
+          max-width: 80%;
+          height: 46px;
+        }
+      }
+      .link {
+        margin-top: 1rem;
+        a {
+          padding:6px 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+section#gallery {
+
+  .card {
+
+    &__title {
+
+    }
+    &__subtitle {
+      font-size: $p2;
+    }
+
+    &__content {
+        margin-top: 1rem;
+        --gap: .3rem;
+        --columns: 2;
+        display: column;
+        columns: var(--columns);
+        gap:var(--gap);
+        
+        & > * {
+          break-inside: avoid;
+          // margin-bottom: var(--gap);
+        }
+
+        @supports(grid-template-rows: masonry) {
+          display: grid;
+          grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+          grid-template-rows: masonry;
+        }
+
+      }
+    &__img {
+      img {
+        width:100%;
+        height:auto;
+        border:6px solid white;
+        box-shadow: 0px 20px 17px -20px rgb(77, 77, 77);
+        border-radius: 12px;
+      }
+      
+    } 
+    
+  }
+}

@@ -1,0 +1,133 @@
+/** Welcome Modal */
+#welcome {
+  --featured-image-width: 160px;
+  --featured-image-height: 160px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position:fixed;
+  display: flex;
+  opacity: 1;
+  z-index: 500;
+  padding-top:1.5rem;
+  padding-bottom:1.5rem;
+
+  .divider {
+    display:none;
+    width: 100%;
+    height: 30px;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+    &::before{
+      height: 30px;
+    }
+  }
+  .modal {
+  
+    &__content {
+      position:relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin:auto;
+      max-width: 500px;
+      padding: 1rem;
+      margin:auto
+  
+    }
+     &__item:not(:first-child) {
+      margin-top:1rem;
+    }
+    &__item {
+      
+      &.header {
+        & > *:not(:first-child){
+          margin-top:1rem;
+        }
+        .text {
+          font-weight: $bold;
+          font-size: $h6;
+          color: $primary;
+        }
+        .name { 
+          & > *:not(:first-child){
+            margin-left:.4rem;
+          }
+          display: flex;
+          justify-content: center;
+          color: $primary;
+          font-family: $secondaryFont;
+          letter-spacing: 2px;
+
+        }
+        .image {
+          width:var(--featured-image-width);
+          height:var(--featured-image-height);
+          border-radius:50% ;
+          border: 8px solid white;
+          box-shadow: -5px 2px 29px -10px;
+          overflow: hidden;
+          margin-left: auto;
+          margin-right: auto;
+          img {
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+          }
+        }
+      }
+      &.body {
+        .title {
+          font-size: $h5;
+          color: $primary;
+        }
+        .label {
+          font-size: $p1;
+        }
+        .description{
+          line-height: 1.4;
+          font-size: 12.5px;
+          color: lighten($baseColor, 10);
+        }
+        .text{
+          font-size: 11px;
+           color: lighten($baseColor, 10);
+        }
+      }
+      &.action {
+        button {
+          padding:.6rem 2.6rem;
+          display:flex;
+          align-items: center;
+          font-size: $p1;
+          .icon {
+            margin-right: .4rem;
+          }
+        }
+      }
+
+
+      
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fffbfbbf;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  
+  
+}

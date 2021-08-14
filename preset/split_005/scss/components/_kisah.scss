@@ -1,0 +1,77 @@
+
+$spacing: 50px;
+$radius: 4px;
+
+$dotborder: 3px;
+$dot: 11px;
+$line: 3px;
+
+
+section#kisah {
+  padding:5px;
+  .card {
+    .timeline {
+      border-left: $line solid $primary;
+      border-bottom-right-radius: $radius;
+      border-top-right-radius: $radius;    
+      margin: 0 auto;
+      letter-spacing: 0.5px;   
+      position: relative;
+      line-height: 1.4em;
+      font-size: 1.03em;   
+      padding: 1rem 1rem 1rem 3rem;
+      list-style: none;
+      text-align: left;
+      font-weight: 100;
+      margin-left: 3rem;
+      
+      h2 {
+       font-family: $mainFont;
+       font-weight: 100;
+       font-size: 1.4em;   
+       margin-bottom: 1rem; 
+      }
+      
+      h3, h4 {
+       font-weight: $semibold;
+       margin-bottom: .7rem;
+       font-size: $h6;
+      }
+      
+      .event {
+        border-bottom: 1px dashed $baseColor;
+        padding-bottom: ($spacing * 0.5);
+        margin-bottom: $spacing;  
+        position: relative;
+
+        p {
+          font-size: $p3;
+        }
+    
+        &:last-of-type { 
+          padding-bottom: 0;
+          margin-bottom: 0; 
+          border: none;      
+        }
+    
+        &:before, &:after {
+          position: absolute;
+          display: block;
+          top: 0;
+        }
+    
+        &:after {
+          box-shadow: 0 0 0 $dotborder $primary;
+          left: -55px;        
+          background: $backgroundColor;    
+          border-radius: 50%;  
+          height: $dot;
+          width: $dot;
+          content: "";
+          top: 5px;
+        }
+      }
+    }
+  }
+  
+}

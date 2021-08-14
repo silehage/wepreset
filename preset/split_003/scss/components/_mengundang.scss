@@ -1,0 +1,23 @@
+section#mengundang {
+
+  .card {
+    
+    &__content {
+      text-align: center; 
+    }
+    &__item {
+      padding-top: .7rem;
+      padding-bottom: .7rem;
+
+      .nama {
+        font-weight: $bold;
+      }
+      .deskripsi {
+        margin-top:0;
+        font-size: $p3;
+        color:darken($backgroundColor, 50)
+      }
+    }
+
+  }
+}

@@ -290,6 +290,7 @@ strong {
 h1, h2, h3, h4, h5, h6 {
   margin-top: .5rem;
   margin-bottom: .5rem;
+  line-height: 1.6;
 }
 
 h2.title {
@@ -335,6 +336,7 @@ h6.title {
   font-family: "Great Vibes", cursive;
   color: #ca127d;
   font-weight: 600;
+  line-height: 1.6;
 }
 
 .card__subtitle {
@@ -480,12 +482,22 @@ h6.title {
           order: 3;
   width: 160px;
   height: 160px;
-  -o-object-fit: cover;
-     object-fit: cover;
   border-radius: 50%;
   border: 8px solid white;
   -webkit-box-shadow: -5px 2px 29px -10px;
           box-shadow: -5px 2px 29px -10px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#welcome .modal__item.header .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
 }
 
 #welcome .modal__item.header .name {
@@ -578,11 +590,21 @@ h6.title {
           align-items: center;
   min-height: 100vh;
   width: 100%;
-  background-image: url("./asset/hero_bg-main.png");
+  background-color: #080808;
+}
+
+.home:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: var(--bg-image);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #080808;
+  opacity: .4;
 }
 
 .home .ornament {
@@ -599,26 +621,26 @@ h6.title {
   background-repeat: no-repeat;
 }
 
-.home .ornament__item.left-top {
+.home .ornament__item.top-left {
   background-image: url("./asset/hero_left-top.png");
   background-position: left top;
   left: 0;
   top: 0;
 }
 
-.home .ornament__item.right-top {
+.home .ornament__item.top-right {
   background-position: right top;
   right: 0;
   top: 0;
 }
 
-.home .ornament__item.left-bottom {
+.home .ornament__item.bottom-left {
   background-position: left bottom;
   left: 0;
   bottom: 0;
 }
 
-.home .ornament__item.right-bottom {
+.home .ornament__item.bottom-right {
   background-image: url("./asset/hero_right-bottom.png");
   background-position: right bottom;
   right: 0;
@@ -653,7 +675,7 @@ h6.title {
   text-align: center;
   font-family: "Great Vibes", cursive;
   font-size: 5rem;
-  color: #ca127d;
+  color: white;
 }
 
 section#intro {
@@ -758,7 +780,7 @@ section#acara .data__event .card__item {
 section#acara .data__event .card__item .title {
   color: #ca127d;
   font-weight: 600;
-  margin: .5rem auto;
+  margin: 1rem auto;
   font-size: 1.1rem;
 }
 
@@ -777,8 +799,8 @@ section#acara .data__event .card__item .tanggal {
 
 section#acara .data__event .card__item .tanggal .svg_icon {
   margin-right: 5px;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 section#acara .data__event .card__item .jam {
@@ -797,8 +819,8 @@ section#acara .data__event .card__item .jam {
 
 section#acara .data__event .card__item .jam .svg_icon {
   margin-right: 5px;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 section#acara .data__event .card__item .tempat {
@@ -1068,6 +1090,11 @@ section#angpao .card__content .card__item .akun {
   font-size: 0.83rem;
 }
 
+section#angpao .card__content .card__item button {
+  padding: 5px 10px;
+  font-size: 11px;
+}
+
 section#angpao .card__content .card__item img {
   width: 150px;
   height: auto;
@@ -1143,10 +1170,6 @@ section#rsvp .rsvp__form {
 
 section#rsvp .rsvp__form .card {
   display: block;
-}
-
-section#rsvp .rsvp__form .card__title {
-  font-family: "Montserrat", sans-serif;
 }
 
 section#rsvp .rsvp__form .card__subtitle {
@@ -1662,9 +1685,9 @@ section#prokes .card {
   display: grid;
   width: 65%;
   max-width: 500px;
-  padding: 1.3rem;
+  padding: 1rem;
   opacity: 0;
-  background-color: #f07f7f;
+  background-color: #e6e6e6;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   top: -60px;
@@ -1675,14 +1698,25 @@ section#prokes .card__content {
 }
 
 section#prokes .card__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.4rem;
+  height: 1.4rem;
   top: 0;
   right: 0;
-  background-color: brown;
+  background-color: #cf1818;
   color: white;
   text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
   cursor: pointer;
 }
 

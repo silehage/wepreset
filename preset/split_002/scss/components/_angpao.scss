@@ -11,6 +11,9 @@ section#angpao {
       font-weight: $semibold;
       padding: 0 1rem;
     }
+    &__item > *:not(:last-child) {
+      margin-bottom:.6rem;
+    }
     &__content {
 
       &--header {        
@@ -30,11 +33,13 @@ section#angpao {
         .value{
           font-size: $h6;
           font-weight: $semibold;
-          margin-bottom:.3rem;
         }
         .text{
           font-size: $p2;
-          margin-bottom:.3rem;
+        }
+        button {
+          padding: 5px 10px;
+          font-size: 11px;
         }
         .akun {
           font-size: $p3;

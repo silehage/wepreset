@@ -23,6 +23,9 @@ section#angpao {
     &__item:not(:last-child) {
       margin-bottom:1.4rem;
     }
+    &__item > *:not(:last-child) {
+      margin-bottom:.6rem;
+    }
     &__content {
       margin-top: 1rem;
       display: flex;
@@ -47,14 +50,16 @@ section#angpao {
         .value{
           font-size: $p;
           font-weight: $bold;
-          margin-bottom:.3rem;
         }
         .cabang{
           font-size: $p2;
-          margin-bottom:.3rem;
         }
         .akun {
           font-size: $p3;
+        }
+        button {
+          padding: 5px 10px;
+          font-size: 11px;
         }
         img {
           width:150px;

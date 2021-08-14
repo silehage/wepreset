@@ -1,0 +1,30 @@
+#credit {
+  background-color: $dark;
+  .card {
+    &__title {
+      font-size: $h2;
+      font-family: $secondaryFont;
+      color: lighten($primary, 10);
+    }
+    &__content {
+      font-size: $p4;
+      padding: 5px;
+      color: lighten($baseColor, 10);
+    }
+    &__item {
+      .title {
+        margin: .4rem auto;
+      }
+      .description {
+        font-size: $p;
+      }
+      a {
+        color: lighten($baseColor, 5);
+        &:hover {
+          color:lighten($baseColor, 10)
+        }
+      }
+    }
+
+  }
+}
