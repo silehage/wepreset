@@ -290,7 +290,6 @@ strong {
 h1, h2, h3, h4, h5, h6 {
   margin-top: .5rem;
   margin-bottom: .5rem;
-  line-height: 1.6;
 }
 
 h2.title {
@@ -401,8 +400,9 @@ h6.title {
   padding-bottom: 3rem;
 }
 
-/** Modal Welcome */
 #welcome {
+  --featured-image-width: 150px;
+  --featured-image-height: 150px;
   top: 0;
   left: 0;
   width: 100%;
@@ -413,9 +413,26 @@ h6.title {
   display: flex;
   opacity: 1;
   z-index: 500;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 1.5rem 0;
   color: white;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome {
+    padding: 3px;
+  }
+}
+
+#welcome .divider {
+  display: none;
+  width: 100%;
+  height: 30px;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+#welcome .divider::before {
+  height: 30px;
 }
 
 #welcome .modal__content {
@@ -440,20 +457,14 @@ h6.title {
   margin: auto;
 }
 
-#welcome .modal__content .divider {
-  display: none;
-  width: 100%;
-  height: 40px;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
-}
-
-#welcome .modal__content .divider::before {
-  height: 40px;
+@media screen and (max-width: 600px) {
+  #welcome .modal__content {
+    padding: 5px;
+  }
 }
 
 #welcome .modal__item:not(:first-child) {
-  margin-top: 1rem;
+  margin-top: .6rem;
 }
 
 #welcome .modal__item.header {
@@ -464,24 +475,47 @@ h6.title {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #welcome .modal__item.header .text {
+  font-weight: 600;
+  font-size: 1.1rem;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  font-weight: 600;
+}
+
+#welcome .modal__item.header .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 2px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+#welcome .modal__item.header .name > *:not(:first-child) {
+  margin-left: .4rem;
+}
+
+#welcome .modal__item.header .name .title {
+  font-size: 2.7rem;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.header .name .title {
+    font-size: 2.1rem;
+  }
 }
 
 #welcome .modal__item.header .image {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  width: 160px;
-  height: 160px;
+  width: var(--featured-image-width);
+  height: var(--featured-image-height);
   border-radius: 50%;
   border: 8px solid white;
   -webkit-box-shadow: -5px 2px 29px -10px;
@@ -489,6 +523,9 @@ h6.title {
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
 #welcome .modal__item.header .image img {
@@ -500,67 +537,61 @@ h6.title {
      object-position: center top;
 }
 
-#welcome .modal__item.header .name {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#welcome .modal__item.body .title {
+  font-size: 1.7rem;
 }
 
-#welcome .modal__item.header .name > *:not(:first-child) {
-  margin-left: .7rem;
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .title {
+    font-size: 1.3rem;
+  }
 }
 
-#welcome .modal__item.header .name .title {
-  font-family: "Great Vibes", cursive;
-  letter-spacing: 3px;
+#welcome .modal__item.body .label {
+  font-size: 0.87rem;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .label {
+    font-size: 0.83rem;
+  }
 }
 
 #welcome .modal__item.body .description {
-  line-height: 1.5;
-  font-size: 13px;
-  opacity: .8;
-}
-
-#welcome .modal__item.body .recipient .label {
+  line-height: 1.4;
   font-size: 0.83rem;
 }
 
-#welcome .modal__item.body .recipient .title {
-  font-size: 1.3rem;
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .description {
+    font-size: 11px;
+  }
 }
 
-#welcome .modal__item.body .recipient .text {
+#welcome .modal__item.body .text {
   font-size: 11px;
 }
 
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .text {
+    font-size: 9px;
+  }
+}
+
 #welcome .modal__item.action button {
-  padding: .5rem 2rem;
-  background-color: #f07f7f;
-  border: 1px solid #f39696;
-  color: #dcf6fe;
-  font-weight: 600;
-  border-radius: 5px;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  padding: .6rem 2.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 13px;
+  font-size: 0.95rem;
+  background-color: #ca127d;
 }
 
 #welcome .modal__item.action button .icon {
   margin-right: .4rem;
-}
-
-#welcome .modal__item.action button:hover, #welcome .modal__item.action button:focus {
-  background-color: #ed6868;
-  color: white;
 }
 
 #welcome::before {
@@ -1816,6 +1847,11 @@ section#prokes .card__item ol li {
   color: #e6e6e6;
 }
 
+section#savedate .card .divider.second {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
 section#savedate .card .countdown__container {
   padding: 1rem;
   text-align: center;
@@ -1832,6 +1868,7 @@ section#savedate .card .countdown__container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #ca127d;
 }
 
 section#savedate .card .countdown__block {
@@ -1844,7 +1881,7 @@ section#savedate .card .countdown__block {
 }
 
 section#savedate .card .countdown__item {
-  padding: 3px 8px;
+  padding: 3px 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1853,69 +1890,70 @@ section#savedate .card .countdown__item {
           align-items: center;
 }
 
-section#savedate .card .countdown__item.day {
-  font-size: 3.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  font-weight: 600;
-}
-
-section#savedate .card .countdown__item.day .label {
-  margin-left: .7rem;
-  font-size: 3.5rem;
-}
-
-section#savedate .card .countdown__item.day .digit {
-  font-size: 3.5rem;
-}
-
 section#savedate .card .countdown__item .digit {
   font-size: 1.7rem;
 }
 
 section#savedate .card .countdown__item .label {
-  font-size: 1rem;
+  font-size: 0.87rem;
+  margin-left: 3px;
+}
+
+section#savedate .card .countdown__item.day {
+  font-size: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  font-weight: 600;
+}
+
+section#savedate .card .countdown__item.day .label {
   margin-left: .5rem;
+  font-size: 1.3rem;
+}
+
+section#savedate .card .countdown__item.day .digit {
+  font-size: 5rem;
 }
 
 section#savedate .card .countdown__endtext {
   font-size: 1.3rem;
 }
 
-section#quote {
-  padding-top: 0;
-}
-
 section#quote .card {
-  max-width: 800px;
+  padding: 0 .5rem;
 }
 
-section#quote .card__item {
-  background-color: rgba(255, 255, 255, 0.6);
+section#quote .card__content {
+  background-color: white;
   border-radius: 6px;
-  padding: 1rem;
+  padding: 1.4rem;
 }
 
-section#quote .card__item blockquote {
+section#quote .card__content blockquote {
   font-size: 0.87rem;
+  margin: 0;
   line-height: 1.6;
 }
 
-section#quote .card__item blockquote .quote {
+section#quote .card__content blockquote .quote {
   font-size: 2.1rem;
 }
 
-section#quote .card__item blockquote::before {
+section#quote .card__content blockquote::before {
   content: open-quote;
 }
 
-section#quote .card__item blockquote::after {
+section#quote .card__content blockquote::after {
   content: close-quote;
 }
 
-section#quote .card footer {
+section#quote .card__content footer {
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: block;

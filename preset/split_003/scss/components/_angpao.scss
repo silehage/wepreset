@@ -24,7 +24,7 @@ section#angpao {
       margin-bottom:1.4rem;
     }
     &__item > *:not(:last-child) {
-      margin-bottom:.5rem;
+      margin-bottom:.6rem;
     }
     &__content {
       margin-top: 1rem;
@@ -51,21 +51,16 @@ section#angpao {
           font-size: $p;
           font-weight: $bold;
         }
-        .cabang{
-          font-size: $p2;
-        }
         .akun {
           font-size: $p3;
         }
         button{
-          padding: 5px 10px;
-          font-size: 11px;
+          padding: 5px 12px;
+          font-size:11px;
         }
         img {
           width:150px;
           height:auto;
-          margin-top: .5rem;
-          margin-bottom: .5rem;
           background-color: #fff;
   
         }

@@ -428,8 +428,8 @@ h6 {
 
 /** Welcome Modal */
 #welcome {
-  --featured-image-width: 160px;
-  --featured-image-height: 160px;
+  --featured-image-width: 150px;
+  --featured-image-height: 150px;
   top: 0;
   left: 0;
   width: 100%;
@@ -440,16 +440,21 @@ h6 {
   display: flex;
   opacity: 1;
   z-index: 500;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome {
+    padding: 3px;
+  }
 }
 
 #welcome .divider {
   display: none;
   width: 100%;
   height: 30px;
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 #welcome .divider::before {
@@ -478,8 +483,14 @@ h6 {
   margin: auto;
 }
 
+@media screen and (max-width: 600px) {
+  #welcome .modal__content {
+    padding: 5px;
+  }
+}
+
 #welcome .modal__item:not(:first-child) {
-  margin-top: 1rem;
+  margin-top: .6rem;
 }
 
 #welcome .modal__item.header {
@@ -494,7 +505,7 @@ h6 {
 
 #welcome .modal__item.header .text {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #db5cbb;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -518,6 +529,16 @@ h6 {
 
 #welcome .modal__item.header .name > *:not(:first-child) {
   margin-left: .4rem;
+}
+
+#welcome .modal__item.header .name .title {
+  font-size: 2.7rem;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.header .name .title {
+    font-size: 2.1rem;
+  }
 }
 
 #welcome .modal__item.header .image {
@@ -545,8 +566,14 @@ h6 {
 }
 
 #welcome .modal__item.body .title {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   color: #db5cbb;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .title {
+    font-size: 1.3rem;
+  }
 }
 
 #welcome .modal__item.body .label {
@@ -555,13 +582,25 @@ h6 {
 
 #welcome .modal__item.body .description {
   line-height: 1.4;
-  font-size: 12.5px;
+  font-size: 0.83rem;
   color: #b48eaa;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .description {
+    font-size: 11px;
+  }
 }
 
 #welcome .modal__item.body .text {
   font-size: 11px;
   color: #b48eaa;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .text {
+    font-size: 9px;
+  }
 }
 
 #welcome .modal__item.action button {
@@ -1756,7 +1795,7 @@ section#savedate .card .countdown__item .digit {
 }
 
 section#savedate .card .countdown__item .label {
-  font-size: 1rem;
+  font-size: 0.87rem;
   margin-left: 3px;
 }
 
@@ -1765,17 +1804,21 @@ section#savedate .card .countdown__item.day {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   font-weight: 600;
 }
 
 section#savedate .card .countdown__item.day .label {
   margin-left: .5rem;
-  font-size: 3.5rem;
+  font-size: 1.3rem;
 }
 
 section#savedate .card .countdown__item.day .digit {
-  font-size: 3.5rem;
+  font-size: 5rem;
 }
 
 section#savedate .card .countdown__endtext {
@@ -1783,17 +1826,18 @@ section#savedate .card .countdown__endtext {
 }
 
 section#quote .card {
-  padding: 0 2rem;
+  padding: 0 .5rem;
 }
 
 section#quote .card__content {
   background-color: white;
   border-radius: 6px;
-  padding: 1rem;
+  padding: 1.4rem;
 }
 
 section#quote .card__content blockquote {
   font-size: 0.87rem;
+  margin: 0;
   line-height: 1.6;
 }
 

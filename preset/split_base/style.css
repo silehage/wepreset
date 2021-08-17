@@ -476,11 +476,11 @@ h6 {
 }
 
 #welcome .modal__item:not(:first-child) {
-  margin-top: 1rem;
+  margin-top: .6rem;
 }
 
 #welcome .modal__item.header > *:not(:first-child) {
-  margin-top: 1rem;
+  margin-top: .6rem;
 }
 
 #welcome .modal__item.header .text {
@@ -1670,6 +1670,11 @@ section#prokes .card__item ol li {
   color: #77501d;
 }
 
+section#savedate .card .divider.second {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
 section#savedate .card .countdown__container {
   padding: 1rem;
   text-align: center;
@@ -1686,7 +1691,7 @@ section#savedate .card .countdown__container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #a67917;
+  color: #ca127d;
 }
 
 section#savedate .card .countdown__block {
@@ -1713,7 +1718,7 @@ section#savedate .card .countdown__item .digit {
 }
 
 section#savedate .card .countdown__item .label {
-  font-size: 1rem;
+  font-size: 0.87rem;
   margin-left: 3px;
 }
 
@@ -1722,17 +1727,21 @@ section#savedate .card .countdown__item.day {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   font-weight: 600;
 }
 
 section#savedate .card .countdown__item.day .label {
   margin-left: .5rem;
-  font-size: 3.5rem;
+  font-size: 1.3rem;
 }
 
 section#savedate .card .countdown__item.day .digit {
-  font-size: 3.5rem;
+  font-size: 5rem;
 }
 
 section#savedate .card .countdown__endtext {
@@ -1740,17 +1749,18 @@ section#savedate .card .countdown__endtext {
 }
 
 section#quote .card {
-  padding: 0 2rem;
+  padding: 0 .5rem;
 }
 
 section#quote .card__content {
   background-color: white;
   border-radius: 6px;
-  padding: 1rem;
+  padding: 1.4rem;
 }
 
 section#quote .card__content blockquote {
   font-size: 0.87rem;
+  margin: 0;
   line-height: 1.6;
 }
 

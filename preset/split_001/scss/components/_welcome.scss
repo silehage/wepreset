@@ -1,5 +1,7 @@
 /** Welcome Modal */
 #welcome {
+  --featured-image-width: 200px;
+  --featured-image-height: 130px;
   top: 0;
   left: 0;
   width: 100%;
@@ -8,15 +10,17 @@
   display: flex;
   opacity: 1;
   z-index: 500;
-  padding-top:1.5rem;
-  padding-bottom:1.5rem;
+  padding:1.5rem 0;
+  @media screen and ( max-width: 600px ) {
+    padding:3px;
+  }
 
   .divider {
     display:none;
     width: 100%;
     height: 30px;
-    margin-top: 1.6rem;
-    margin-bottom: 1.6rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
     &::before{
       height: 30px;
     }
@@ -32,18 +36,23 @@
       text-align: center;
       margin:auto;
       max-width: 500px;
-      padding: 1rem;
-      margin:auto
+      padding: 1.5rem;
+      margin:auto;
+      @media screen and ( max-width: 600px ) {
+        padding:5px;
+      }
   
     }
      &__item:not(:first-child) {
-      margin-top:1rem;
+      margin-top:.6rem;
     }
     &__item {
       
       &.header {
+        display:flex;
+        flex-direction: column;
         & > *:not(:first-child){
-          margin-top:1rem;
+          margin-top:.6rem;
         }
         .text {
           font-weight: $bold;
@@ -58,11 +67,18 @@
           font-family: $secondaryFont;
           letter-spacing: 2px;
 
+          .title {
+            font-size: $h2;
+            @media screen and ( max-width: 600px ) {
+              font-size: $h3;
+            }
+          }
+
         }
         .image {
-          width:220px;
-          height:150px;
-          min-width: 200px;
+          width:var(--featured-image-width);
+          height:var(--featured-image-height);
+          border-radius:8px ;
           border: 8px solid white;
           box-shadow: -5px 2px 29px -10px;
           overflow: hidden;
@@ -78,18 +94,31 @@
       }
       &.body {
         .title {
-          font-size: $h5;
+          font-size: $h4;
+          @media screen and ( max-width: 600px ) {
+            font-size: $h5 
+          }
         }
         .label {
-          font-size: $p1;
+          font-size: $p2;
+          @media screen and ( max-width: 600px ) {
+            font-size: $p3 
+          }
         }
         .description{
           line-height: 1.4;
-          font-size: 12.5px;
+          font-size: $p3;
           color: lighten($baseColor, 10);
+
+          @media screen and ( max-width: 600px ) {
+            font-size: 11px; 
+          }
         }
         .text{
           font-size: 11px;
+          @media screen and ( max-width: 600px ) {
+            font-size: 9px; 
+          }
            color: lighten($baseColor, 10);
         }
       }
@@ -103,10 +132,7 @@
             margin-right: .4rem;
           }
         }
-      }
-
-
-      
+      }    
     }
   }
 

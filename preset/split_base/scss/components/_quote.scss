@@ -1,12 +1,13 @@
 section#quote{
   .card {
-    padding: 0 2rem;
+    padding: 0 .5rem;
     &__content {
       background-color: white;
       border-radius: 6px;
-      padding:1rem;
+      padding:1.4rem;
       blockquote {
         font-size: $p2;
+        margin: 0;
         .quote {
           font-size: $h3;
         }

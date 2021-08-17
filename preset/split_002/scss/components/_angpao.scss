@@ -11,14 +11,31 @@ section#angpao {
       font-weight: $semibold;
       padding: 0 1rem;
     }
+    &__header {
+      margin-top: 1rem;
+      .card__item {
+        .title {
+          font-size: $h6;
+        }
+      }
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom:1.4rem;
+    }
     &__item > *:not(:last-child) {
       margin-bottom:.6rem;
     }
     &__content {
-
-      &--header {        
-        margin-top: 2rem;
-        margin-bottom: 1rem;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      .header {
+        h5 {
+          font-size: $h6;
+          margin-bottom: 1rem;
+          color:$primary;
+        }
       }
       .card__item {
         .title {
@@ -28,37 +45,26 @@ section#angpao {
   
         .provider {
           font-weight: $bold;
-          margin-bottom:.7rem;
+          font-size: $p;
         }
         .value{
-          font-size: $h6;
-          font-weight: $semibold;
-        }
-        .text{
-          font-size: $p2;
-        }
-        button {
-          padding: 5px 10px;
-          font-size: 11px;
+          font-size: $p;
+          font-weight: $bold;
         }
         .akun {
           font-size: $p3;
         }
+        button{
+          padding: 5px 12px;
+          font-size:11px;
+        }
         img {
           width:150px;
           height:auto;
-          margin-top: .5rem;
-          margin-bottom: .5rem;
-          border: 2px solid;
-          background-color: white;
+          background-color: #fff;
   
         }
       }
-
-    }
-    &__item:not(:last-child) {
-      margin-bottom: 1.5rem;
-
     }
 
   }

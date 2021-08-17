@@ -1,5 +1,10 @@
 section#savedate {
   .card {
+    .divider {
+      &.second {
+        transform: rotateX(180deg);
+      }
+    }
 
     .countdown {
       &__container {
@@ -9,6 +14,7 @@ section#savedate {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        color: $primary;
       }
       &__block {
         display: flex;
@@ -18,30 +24,30 @@ section#savedate {
 
       } 
       &__item {
-        padding: 3px 8px;
+        padding: 3px 5px;
         display:flex;
         align-items: center;
-
-        &.day{
-          font-size: $h1;
-          display: flex;
-          width: 100%;
-          font-weight: $bold;
-
-          .label {
-            margin-left: .7rem;
-            font-size: $h1;
-          }
-          .digit {
-            font-size: $h1;
-          }
-        }
         .digit {
           font-size: $h4;
         }
         .label {
-          font-size: $p;
-          margin-left: .5rem;
+          font-size: $p2;
+          margin-left: 3px;
+        }
+        &.day{
+          font-size: $h1;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          font-weight: $bold;
+
+          .label {
+            margin-left: .5rem;
+            font-size: $h5;
+          }
+          .digit {
+            font-size: 5rem;
+          }
         }
       }
       &__endtext {

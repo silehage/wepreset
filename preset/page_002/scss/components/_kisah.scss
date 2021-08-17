@@ -1,0 +1,110 @@
+
+$spacing: 30px;
+$radius: 4px;
+
+$dotborder: 3px;
+$dot: 11px;
+$line: 3px;
+
+
+section#kisah {
+  --content-width: 100%;
+  --timeline-width: 90%;
+  --justify-content: center;
+  --space-left: 3rem;
+
+  .card {
+  &__content {
+    width: var(--content-width);
+    margin:auto;
+    display:flex;
+    justify-content: var(--justify-content);
+    padding-top:2rem;
+
+      @media only screen and (min-width: 1024px) {
+        --content-width: 768px;
+        --timeline-width: var(var(--content-width)/2)
+        --justify-content: flex-end;
+      }
+
+      .timeline {
+        border-left: $line solid lighten($baseColor, 10);
+        border-bottom-right-radius: $radius;
+        border-top-right-radius: $radius;    
+        color: $baseColor;
+        letter-spacing: 0.5px;   
+        position: relative;
+        line-height: 1.4em;
+        font-size: 1.03em;   
+        padding:2rem var(--space-left);
+        list-style: none;
+        text-align: left;
+        font-weight: 100;
+        width: var(--timeline-width);
+        
+        h2 {
+         font-family: $mainFont;
+         font-weight: 100;
+         font-size: 1.4em;   
+         margin-bottom: 1rem; 
+        }
+        
+        h3, h4 {
+         font-weight: $semibold;
+         margin-bottom: .7rem;
+        }
+        
+        .event {
+          position: relative;
+
+          @media only screen and (min-width:1024px) {
+
+            &:nth-child(odd) {    
+              .event__item {
+                text-align:right;
+                right: var(--timeline-width);
+              }
+              
+            }
+          }
+
+          
+          &__item {
+            text-align:left;
+            position: relative;
+            padding-bottom: ($spacing * 0.5);
+            margin-bottom: $spacing;  
+            // border-bottom: 1px dashed lighten($baseColor, 10);
+            p {
+              font-size: $p3;
+            }
+          }
+  
+      
+          &:last-of-type { 
+            padding-bottom: 0;
+            margin-bottom: 0; 
+            border: none;      
+          }
+      
+          &:before, &:after {
+            position: absolute;
+            display: block;
+            top: 0;
+          }
+      
+          &:after {
+            box-shadow: 0 0 0 $dotborder lighten($baseColor, 10);
+            left: -55px;        
+            background: $backgroundColor;    
+            border-radius: 50%;  
+            height: $dot;
+            width: $dot;
+            content: "";
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+}

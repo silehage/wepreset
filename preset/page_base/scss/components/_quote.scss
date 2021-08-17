@@ -1,13 +1,13 @@
 section#quote{
-  padding-top:0;
   .card {
-    max-width: 800px;
-    &__item {
-      background-color: rgba(white, .6);
+    padding: 0 .5rem;
+    &__content {
+      background-color: white;
       border-radius: 6px;
-      padding:1rem;
+      padding:1.4rem;
       blockquote {
         font-size: $p2;
+        margin: 0;
         .quote {
           font-size: $h3;
         }
@@ -20,13 +20,13 @@ section#quote{
           content: close-quote;
         }
       }
-    }
-    footer {
-      margin-top:1rem;
-      margin-bottom:1rem;
-      display:block;
-      font-weight: $bold;
-      font-size: $p;
+      footer {
+        margin-top:1rem;
+        margin-bottom:1rem;
+        display:block;
+        font-weight: $bold;
+        font-size: $p;
+      }
     }
   }
 }

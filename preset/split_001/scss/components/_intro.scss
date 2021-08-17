@@ -16,6 +16,11 @@ section#intro {
       line-height: 1.6;
       padding:1rem;
     }
+    .divider {
+      &.second {
+        transform: rotate(180deg);
+      }
+    }
   }
 
 }

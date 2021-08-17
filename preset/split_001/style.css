@@ -427,6 +427,8 @@ h6 {
 
 /** Welcome Modal */
 #welcome {
+  --featured-image-width: 200px;
+  --featured-image-height: 130px;
   top: 0;
   left: 0;
   width: 100%;
@@ -437,16 +439,21 @@ h6 {
   display: flex;
   opacity: 1;
   z-index: 500;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome {
+    padding: 3px;
+  }
 }
 
 #welcome .divider {
   display: none;
   width: 100%;
   height: 30px;
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 #welcome .divider::before {
@@ -471,16 +478,32 @@ h6 {
   text-align: center;
   margin: auto;
   max-width: 500px;
-  padding: 1rem;
+  padding: 1.5rem;
   margin: auto;
 }
 
+@media screen and (max-width: 600px) {
+  #welcome .modal__content {
+    padding: 5px;
+  }
+}
+
 #welcome .modal__item:not(:first-child) {
-  margin-top: 1rem;
+  margin-top: .6rem;
+}
+
+#welcome .modal__item.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #welcome .modal__item.header > *:not(:first-child) {
-  margin-top: 1rem;
+  margin-top: .6rem;
 }
 
 #welcome .modal__item.header .text {
@@ -503,10 +526,20 @@ h6 {
   margin-left: .4rem;
 }
 
+#welcome .modal__item.header .name .title {
+  font-size: 2.7rem;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.header .name .title {
+    font-size: 2.1rem;
+  }
+}
+
 #welcome .modal__item.header .image {
-  width: 220px;
-  height: 150px;
-  min-width: 200px;
+  width: var(--featured-image-width);
+  height: var(--featured-image-height);
+  border-radius: 8px;
   border: 8px solid white;
   -webkit-box-shadow: -5px 2px 29px -10px;
           box-shadow: -5px 2px 29px -10px;
@@ -525,22 +558,46 @@ h6 {
 }
 
 #welcome .modal__item.body .title {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .title {
+    font-size: 1.3rem;
+  }
 }
 
 #welcome .modal__item.body .label {
-  font-size: 0.95rem;
+  font-size: 0.87rem;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .label {
+    font-size: 0.83rem;
+  }
 }
 
 #welcome .modal__item.body .description {
   line-height: 1.4;
-  font-size: 12.5px;
+  font-size: 0.83rem;
   color: #c98731;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .description {
+    font-size: 11px;
+  }
 }
 
 #welcome .modal__item.body .text {
   font-size: 11px;
   color: #c98731;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .text {
+    font-size: 9px;
+  }
 }
 
 #welcome .modal__item.action button {
@@ -687,6 +744,11 @@ section#intro .card__item {
   font-size: 0.87rem;
   line-height: 1.6;
   padding: 1rem;
+}
+
+section#intro .card .divider.second {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 /**
@@ -958,6 +1020,10 @@ section#angpao .card__item:not(:last-child) {
   margin-bottom: 1.4rem;
 }
 
+section#angpao .card__item > *:not(:last-child) {
+  margin-bottom: .6rem;
+}
+
 section#angpao .card__content {
   margin-top: 1rem;
   display: -webkit-box;
@@ -967,6 +1033,12 @@ section#angpao .card__content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+section#angpao .card__content .header h5 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #ca127d;
 }
 
 section#angpao .card__content .card__item .title {
@@ -982,23 +1054,20 @@ section#angpao .card__content .card__item .provider {
 section#angpao .card__content .card__item .value {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: .3rem;
-}
-
-section#angpao .card__content .card__item .cabang {
-  font-size: 0.87rem;
-  margin-bottom: .3rem;
 }
 
 section#angpao .card__content .card__item .akun {
   font-size: 0.83rem;
 }
 
+section#angpao .card__content .card__item button {
+  padding: 5px 12px;
+  font-size: 11px;
+}
+
 section#angpao .card__content .card__item img {
   width: 150px;
   height: auto;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
   background-color: #fff;
 }
 
@@ -1649,6 +1718,11 @@ section#prokes .card__item ol li {
   color: #77501d;
 }
 
+section#savedate .card .divider.second {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
 section#savedate .card .countdown__container {
   padding: 1rem;
   text-align: center;
@@ -1665,7 +1739,7 @@ section#savedate .card .countdown__container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #a67917;
+  color: #ca127d;
 }
 
 section#savedate .card .countdown__block {
@@ -1678,7 +1752,7 @@ section#savedate .card .countdown__block {
 }
 
 section#savedate .card .countdown__item {
-  padding: 3px 8px;
+  padding: 3px 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1687,31 +1761,35 @@ section#savedate .card .countdown__item {
           align-items: center;
 }
 
-section#savedate .card .countdown__item.day {
-  font-size: 3.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  font-weight: 600;
-}
-
-section#savedate .card .countdown__item.day .label {
-  margin-left: .7rem;
-  font-size: 3.5rem;
-}
-
-section#savedate .card .countdown__item.day .digit {
-  font-size: 3.5rem;
-}
-
 section#savedate .card .countdown__item .digit {
   font-size: 1.7rem;
 }
 
 section#savedate .card .countdown__item .label {
-  font-size: 1rem;
+  font-size: 0.87rem;
+  margin-left: 3px;
+}
+
+section#savedate .card .countdown__item.day {
+  font-size: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  font-weight: 600;
+}
+
+section#savedate .card .countdown__item.day .label {
   margin-left: .5rem;
+  font-size: 1.3rem;
+}
+
+section#savedate .card .countdown__item.day .digit {
+  font-size: 5rem;
 }
 
 section#savedate .card .countdown__endtext {
@@ -1719,17 +1797,18 @@ section#savedate .card .countdown__endtext {
 }
 
 section#quote .card {
-  padding: 0 2rem;
+  padding: 0 .5rem;
 }
 
 section#quote .card__content {
   background-color: white;
   border-radius: 6px;
-  padding: 1rem;
+  padding: 1.4rem;
 }
 
 section#quote .card__content blockquote {
   font-size: 0.87rem;
+  margin: 0;
   line-height: 1.6;
 }
 

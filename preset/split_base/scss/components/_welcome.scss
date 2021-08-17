@@ -37,13 +37,13 @@
   
     }
      &__item:not(:first-child) {
-      margin-top:1rem;
+      margin-top:.6rem;
     }
     &__item {
       
       &.header {
         & > *:not(:first-child){
-          margin-top:1rem;
+          margin-top:.6rem;
         }
         .text {
           font-weight: $bold;

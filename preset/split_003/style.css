@@ -428,8 +428,8 @@ h6 {
 
 /** Welcome Modal */
 #welcome {
-  --featured-image-width: 160px;
-  --featured-image-height: 160px;
+  --featured-image-width: 150px;
+  --featured-image-height: 150px;
   top: 0;
   left: 0;
   width: 100%;
@@ -440,16 +440,21 @@ h6 {
   display: flex;
   opacity: 1;
   z-index: 500;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome {
+    padding: 3px;
+  }
 }
 
 #welcome .divider {
   display: none;
   width: 100%;
   height: 30px;
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 #welcome .divider::before {
@@ -478,17 +483,33 @@ h6 {
   margin: auto;
 }
 
-#welcome .modal__item:not(:first-child) {
-  margin-top: 1rem;
+@media screen and (max-width: 600px) {
+  #welcome .modal__content {
+    padding: 5px;
+  }
 }
 
-#welcome .modal__item.header > *:not(:first-child) {
-  margin-top: 1rem;
+#welcome .modal__item:not(:first-child) {
+  margin-top: .6rem;
+}
+
+#welcome .modal__item.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #welcome .modal__item.header .text {
   font-weight: 600;
   font-size: 1.1rem;
+  color: #b65e5d;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 #welcome .modal__item.header .name {
@@ -498,12 +519,26 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #b65e5d;
   font-family: "Great Vibes", cursive;
   letter-spacing: 2px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 #welcome .modal__item.header .name > *:not(:first-child) {
   margin-left: .4rem;
+}
+
+#welcome .modal__item.header .name .title {
+  font-size: 2.7rem;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.header .name .title {
+    font-size: 2.1rem;
+  }
 }
 
 #welcome .modal__item.header .image {
@@ -516,6 +551,9 @@ h6 {
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
 #welcome .modal__item.header .image img {
@@ -528,22 +566,47 @@ h6 {
 }
 
 #welcome .modal__item.body .title {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
+  color: #b65e5d;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .title {
+    font-size: 1.3rem;
+  }
 }
 
 #welcome .modal__item.body .label {
-  font-size: 0.95rem;
+  font-size: 0.87rem;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .label {
+    font-size: 0.83rem;
+  }
 }
 
 #welcome .modal__item.body .description {
   line-height: 1.4;
-  font-size: 12.5px;
+  font-size: 0.83rem;
   color: #c68180;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .description {
+    font-size: 11px;
+  }
 }
 
 #welcome .modal__item.body .text {
   font-size: 11px;
   color: #c68180;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome .modal__item.body .text {
+    font-size: 9px;
+  }
 }
 
 #welcome .modal__item.action button {
@@ -977,7 +1040,7 @@ section#angpao .card__item:not(:last-child) {
 }
 
 section#angpao .card__item > *:not(:last-child) {
-  margin-bottom: .5rem;
+  margin-bottom: .6rem;
 }
 
 section#angpao .card__content {
@@ -1012,24 +1075,18 @@ section#angpao .card__content .card__item .value {
   font-weight: 600;
 }
 
-section#angpao .card__content .card__item .cabang {
-  font-size: 0.87rem;
-}
-
 section#angpao .card__content .card__item .akun {
   font-size: 0.83rem;
 }
 
 section#angpao .card__content .card__item button {
-  padding: 5px 10px;
+  padding: 5px 12px;
   font-size: 11px;
 }
 
 section#angpao .card__content .card__item img {
   width: 150px;
   height: auto;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
   background-color: #fff;
 }
 
@@ -1683,6 +1740,11 @@ section#prokes .card__item ol li {
   color: #9a4746;
 }
 
+section#savedate .card .divider.second {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
 section#savedate .card .countdown__container {
   padding: 1rem;
   text-align: center;
@@ -1699,7 +1761,7 @@ section#savedate .card .countdown__container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #a34746;
+  color: #b65e5d;
 }
 
 section#savedate .card .countdown__block {
@@ -1726,7 +1788,7 @@ section#savedate .card .countdown__item .digit {
 }
 
 section#savedate .card .countdown__item .label {
-  font-size: 1rem;
+  font-size: 0.87rem;
   margin-left: 3px;
 }
 
@@ -1735,17 +1797,21 @@ section#savedate .card .countdown__item.day {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   font-weight: 600;
 }
 
 section#savedate .card .countdown__item.day .label {
   margin-left: .5rem;
-  font-size: 3.5rem;
+  font-size: 1.3rem;
 }
 
 section#savedate .card .countdown__item.day .digit {
-  font-size: 3.5rem;
+  font-size: 5rem;
 }
 
 section#savedate .card .countdown__endtext {
@@ -1753,17 +1819,18 @@ section#savedate .card .countdown__endtext {
 }
 
 section#quote .card {
-  padding: 0 2rem;
+  padding: 0 .5rem;
 }
 
 section#quote .card__content {
   background-color: white;
   border-radius: 6px;
-  padding: 1rem;
+  padding: 1.4rem;
 }
 
 section#quote .card__content blockquote {
   font-size: 0.87rem;
+  margin: 0;
   line-height: 1.6;
 }
 

@@ -1,7 +1,7 @@
 /** Welcome Modal */
 #welcome {
-  --featured-image-width: 160px;
-  --featured-image-height: 160px;
+  --featured-image-width: 150px;
+  --featured-image-height: 150px;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,15 +10,17 @@
   display: flex;
   opacity: 1;
   z-index: 500;
-  padding-top:1.5rem;
-  padding-bottom:1.5rem;
+  padding:1.5rem 0;
+  @media screen and ( max-width: 600px ) {
+    padding:3px;
+  }
 
   .divider {
     display:none;
     width: 100%;
     height: 30px;
-    margin-top: 1.6rem;
-    margin-bottom: 1.6rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
     &::before{
       height: 30px;
     }
@@ -35,11 +37,14 @@
       margin:auto;
       max-width: 500px;
       padding: 1rem;
-      margin:auto
+      margin:auto;
+      @media screen and ( max-width: 600px ) {
+        padding:5px;
+      }
   
     }
      &__item:not(:first-child) {
-      margin-top:1rem;
+      margin-top:.6rem;
     }
     &__item {
       
@@ -51,7 +56,7 @@
         // }
         .text {
           font-weight: $bold;
-          font-size: $h5;
+          font-size: $h6;
           color: $primary;
           order:1;
         }
@@ -65,6 +70,13 @@
           font-family: $secondaryFont;
           letter-spacing: 2px;
           order:2;
+
+          .title {
+            font-size: $h2;
+            @media screen and ( max-width: 600px ) {
+              font-size: $h3;
+            }
+          }
 
         }
         .image {
@@ -87,7 +99,10 @@
       }
       &.body {
         .title {
-          font-size: $h5;
+          font-size: $h4;
+          @media screen and ( max-width: 600px ) {
+            font-size: $h5 
+          }
           color: $primary;
         }
         .label {
@@ -95,11 +110,18 @@
         }
         .description{
           line-height: 1.4;
-          font-size: 12.5px;
+          font-size: $p3;
           color: lighten($baseColor, 10);
+
+          @media screen and ( max-width: 600px ) {
+            font-size: 11px; 
+          }
         }
         .text{
           font-size: 11px;
+          @media screen and ( max-width: 600px ) {
+            font-size: 9px; 
+          }
            color: lighten($baseColor, 10);
         }
       }
