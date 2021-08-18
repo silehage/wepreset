@@ -6,7 +6,7 @@
   position:relative;
   height: calc(100vh - 59px);
   width: 100%;
-  background-color: #522f5a;
+  background-color: rgb(59, 46, 26);
 
   &:before {
     content: '';
@@ -29,16 +29,16 @@
 
     &__item {
       position: absolute;
-      height: 50%;
-      width:50%;
+      height: 70%;
+      width:70%;
       background-size: contain;
       background-repeat: no-repeat;
 
       &.top-left {
-        background-image:url('./asset/orn.png');
+        background-image:url('./asset/bg_back.png');
         background-position: left top;
-        left:0;
-        top:0;
+        left:0px;
+        top:0px;
         opacity:.3;
       }
       &.top-right {
@@ -48,17 +48,10 @@
         // top:0;
       }
       &.bottom-left {
-        //  background-image: url('./asset/hero_left-bottom.png');
-        background-position: left bottom;
-        left:0;
-        bottom: 0;
-      }
-      &.bottom-right {
-        background-image: url('./asset/orn_right.png');;
-        background-position: right bottom;
-        right:0;
-        bottom:0;
-        opacity:.3;
+        // background-image:url('./asset/bg_left_opacity.png');
+        // background-position: left bottom;
+        // left:0;
+        // bottom: 0;
       }
     }
   }

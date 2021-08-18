@@ -1,0 +1,77 @@
+#mempelai {
+  background-color: $light;
+  .card {
+    --card-img:180px;
+    &__content {
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    &__item {
+      padding: 1rem;
+      margin-left:1rem;
+      margin-right:1rem;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+      position: relative;
+      border-radius: 38px;
+      position: relative;
+      background-color: rgb(255, 255, 255);
+      z-index:5;
+
+      & > * {
+        z-index: 5;
+      }
+  
+   
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        transform: scaleY(1.1);
+        border-radius: 50%;
+        width: 100%;
+        left: 0;
+        top: 0;
+      }
+   
+      .image {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+        img {
+          width: 100%;
+          height:auto;
+          width:var(--card-img);
+          height:var(--card-img);
+          overflow:hidden;
+          border-radius: 50%;
+          border:5px solid #fff;
+          box-shadow:-4px 3px 19px -10px #333;
+        }
+
+      }
+
+      .title {
+        font-size: $h5; 
+        margin-top: 1rem;
+        color: $primary;
+        font-weight: $bold;
+      }
+      
+      .description {
+        font-size: $p3;
+        padding: .5rem;
+      }
+
+    }
+  }
+}

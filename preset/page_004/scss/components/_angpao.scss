@@ -1,0 +1,71 @@
+section#angpao {
+
+  .card {
+
+    &__title {
+      padding-bottom:.3rem;
+    }
+
+    &__subtitle {
+      font-size: $p1;
+      font-weight: $semibold;
+      padding: 0 1rem;
+    }
+    &__item:not(:last-child) {
+      margin-bottom:1.4rem;
+    }
+    &__content {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .header {
+        display: flex;
+        width: 100%;
+        padding:1rem;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        
+        .title {
+          position: relative;
+          color:$primary;
+          font-size: $p;
+        }
+
+      }
+      .card__item {
+        margin:1rem;
+        padding:.5rem;
+
+        & > *:not(:first-child) {
+          margin-top: .5rem;
+        }
+
+        .provider {
+          font-size: $p1;
+        }
+        .value{
+          font-size: $h6;
+          font-weight: $bold;
+          letter-spacing: 1px;
+        }
+        .akun {
+          font-size: $p3;
+        }
+        button {
+          padding: 5px 10px;
+          font-size: 11px;
+        }
+        img {
+          width:150px;
+          height:auto;
+          background-color: #fff;
+  
+        }
+      }
+    }
+
+  }
+}
