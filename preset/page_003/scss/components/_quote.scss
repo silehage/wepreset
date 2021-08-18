@@ -1,0 +1,32 @@
+section#quote{
+  .card {
+    padding: 0 .5rem;
+    &__content {
+      background-color: white;
+      border-radius: 6px;
+      padding:1.4rem;
+      blockquote {
+        font-size: $p2;
+        margin: 0;
+        .quote {
+          font-size: $h3;
+        }
+        line-height: 1.6;
+
+        &::before{
+          content: open-quote;
+        }
+        &::after{
+          content: close-quote;
+        }
+      }
+      footer {
+        margin-top:1rem;
+        margin-bottom:1rem;
+        display:block;
+        font-weight: $bold;
+        font-size: $p;
+      }
+    }
+  }
+}
