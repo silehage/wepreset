@@ -7,19 +7,34 @@
   height: calc(100vh - 59px);
   width: 100%;
   background-color: rgb(59, 46, 26);
+  --bingkai:300px;
 
-  &:before {
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   height: var(--bingkai);
+  //   width: var(--bingkai);
+  //   box-shadow: 1px 5px 11px 2px;
+  //   border:8px solid #fff;
+  //   border-radius: 50%;
+  //   background-image: var(--bg-image);
+  //   background-position: center center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   opacity: .2;
+  //   z-index: 1;
+  // }
+  &:after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: var(--bg-image);
+    background-image:url('./asset/bg.png');;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: .4;
   }
 
   .ornament {
@@ -35,23 +50,27 @@
       background-repeat: no-repeat;
 
       &.top-left {
-        background-image:url('./asset/bg_back.png');
-        background-position: left top;
-        left:0px;
-        top:0px;
-        opacity:.3;
+        // background-image:url('./asset/bg.png');
+        // background-position: left top;
+        // left:0px;
+        // top:0px;
+        // opacity:.3;
       }
       &.top-right {
-        //  background-image: url('./asset/hero_right-top.png');
-        // background-position: right top;
-        // right:0;
-        // top:0;
+        background-image:url('./asset/orn2.png');
+        background-position: right top;
+        right:0px;
+        top:0;
+        z-index: 1;
+        opacity:.5;
       }
       &.bottom-left {
-        // background-image:url('./asset/bg_left_opacity.png');
-        // background-position: left bottom;
-        // left:0;
-        // bottom: 0;
+        background-image:url('./asset/orn1.png');
+        background-position: left bottom;
+        left:0;
+        bottom: 0;
+        z-index: 1;
+        opacity:.5;
       }
     }
   }
@@ -66,7 +85,7 @@
     &__item {
 
       &.text {
-        color: $light;
+        color: $primary;
         margin:8px auto;
         font-size: $h6;
       }
@@ -74,7 +93,7 @@
         text-align: center;
         font-family: $secondaryFont;
         font-size: $hero;
-        color: white;
+        color: $primary;
       }
     }
 

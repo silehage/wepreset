@@ -829,8 +829,8 @@ section#gallery .card__img img {
 
 .home .ornament__item {
   position: absolute;
-  height: 70%;
-  width: 70%;
+  height: 60%;
+  width: 60%;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1758,12 +1758,13 @@ div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
           flex-direction: column;
 }
 
+#welcome .modal__item.header > *:not(:first-child) {
+  margin-top: .4rem;
+}
+
 #welcome .modal__item.header .text {
   font-weight: 600;
   font-size: 1.1rem;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
 }
 
 #welcome .modal__item.header .name {
@@ -1775,9 +1776,6 @@ div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
           justify-content: center;
   font-family: "Great Vibes", cursive;
   letter-spacing: 2px;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
 }
 
 #welcome .modal__item.header .name > *:not(:first-child) {
@@ -1804,9 +1802,6 @@ div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
 }
 
 #welcome .modal__item.header .image img {

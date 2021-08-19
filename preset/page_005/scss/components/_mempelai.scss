@@ -1,5 +1,5 @@
 #mempelai {
-  background-color: lighten($light,7);
+  background-color: darken($backgroundColor, 2);
   .card {
     --card-img:180px;
     &__content {
@@ -9,7 +9,7 @@
       margin-top: 1rem;
     }
     &__item {
-      padding: 1rem;
+      padding: 1.4rem;
       margin-left:1rem;
       margin-right:1rem;
       min-width: 300px;
@@ -18,27 +18,13 @@
       align-items: center;
       margin-bottom: 3rem;
       position: relative;
-      border-radius: 38px;
       position: relative;
-      background-color: rgb(255, 255, 255);
       z-index:5;
 
       & > * {
         z-index: 5;
       }
-  
-   
-      &:after {
-        content: '';
-        position: absolute;
-        background-color: rgb(255, 255, 255);
-        height: 100%;
-        transform: scaleY(1.1);
-        border-radius: 50%;
-        width: 100%;
-        left: 0;
-        top: 0;
-      }
+
    
       .image {
         position: relative;
@@ -53,7 +39,7 @@
           width:var(--card-img);
           height:var(--card-img);
           overflow:hidden;
-          border-radius: 50%;
+          border-radius: 40%;
           border:5px solid #fff;
           box-shadow:-4px 3px 19px -10px #333;
         }

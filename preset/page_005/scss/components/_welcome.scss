@@ -38,6 +38,7 @@
       max-width: 500px;
       padding: 1rem;
       margin:auto;
+      z-index: 5;
       @media screen and ( max-width: 600px ) {
         padding:5px;
       }
@@ -147,6 +148,21 @@
     background-color: rgba($dark, 0.85); 
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: var(--bg-image);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .2;
+    z-index: 1;
   }
   
   

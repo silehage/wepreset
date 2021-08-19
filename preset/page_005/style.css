@@ -232,9 +232,9 @@ p {
 }
 
 body {
-  background-color: #fff0f1;
+  background-color: #fffdfe;
   font-family: "Montserrat", sans-serif;
-  color: #b48888;
+  color: #9c8192;
   font-size: 16px;
   overflow-x: hidden;
 }
@@ -244,7 +244,7 @@ button {
   cursor: pointer;
   padding: .7em 2em;
   font-size: 0.83rem;
-  background-color: #9a6a6a;
+  background-color: #b17299;
   text-decoration: none;
   border-radius: 5px;
   color: white;
@@ -257,7 +257,7 @@ button:hover,
 button:focus,
 button:active {
   outline: none;
-  background-color: #895d5d;
+  background-color: #a65e8b;
   color: #f7f7f7;
 }
 
@@ -269,15 +269,15 @@ button:active {
 }
 
 body {
-  background-image: url("./asset/bg_left_opacity.png"), url("./asset/bg_right_opacity.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position-x: left, right;
-  background-position-y: top, top;
-  background-attachment: fixed, fixed;
+  background-color: #e5dbe1;
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%2392aaac' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-position: left top;
+  background-attachment: fixed;
 }
 
 #content {
-  background-color: white;
+  background-color: #fffdfe;
 }
 
 main {
@@ -334,14 +334,14 @@ h6.title {
 .card__title {
   font-size: 2.1rem;
   font-family: "Great Vibes", cursive;
-  color: #ae7a7a;
+  color: #a65e8b;
   font-weight: 600;
   line-height: 1.6;
 }
 
 .card__subtitle {
   font-size: 0.87rem;
-  color: #be9797;
+  color: #a7909f;
   line-height: 1.6;
   width: 90%;
   max-width: 550px;
@@ -433,7 +433,7 @@ section#acara .data__mempelai .card__item .sparator {
 }
 
 section#acara .data__mempelai .card__item .title {
-  color: #ae7a7a;
+  color: #a65e8b;
   font-weight: 600;
   font-family: "Great Vibes", cursive;
   margin: .5rem auto;
@@ -466,7 +466,7 @@ section#acara .data__event .card__item {
 }
 
 section#acara .data__event .card__item .title {
-  color: #ae7a7a;
+  color: #a65e8b;
   font-weight: 600;
   margin: 1rem auto;
   font-size: 1.1rem;
@@ -487,8 +487,8 @@ section#acara .data__event .card__item .tanggal {
 
 section#acara .data__event .card__item .tanggal .svg_icon {
   margin-right: 5px;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
 }
 
 section#acara .data__event .card__item .jam {
@@ -500,6 +500,7 @@ section#acara .data__event .card__item .jam {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: .4rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -507,8 +508,8 @@ section#acara .data__event .card__item .jam {
 
 section#acara .data__event .card__item .jam .svg_icon {
   margin-right: 5px;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
 }
 
 section#acara .data__event .card__item .tempat {
@@ -519,6 +520,10 @@ section#acara .data__event .card__item .tempat {
 section#acara .data__event .card__item .tempat .svg_icon {
   width: 50px;
   height: 50px;
+}
+
+section#angpao {
+  background-color: #fff3f9;
 }
 
 section#angpao .card__title {
@@ -562,7 +567,7 @@ section#angpao .card__content .header {
 
 section#angpao .card__content .header .title {
   position: relative;
-  color: #ae7a7a;
+  color: #a65e8b;
   font-size: 1rem;
 }
 
@@ -621,7 +626,7 @@ section#savedate .card .countdown__container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #ae7a7a;
+  color: #a65e8b;
 }
 
 section#savedate .card .countdown__block {
@@ -679,14 +684,14 @@ section#savedate .card .countdown__endtext {
 }
 
 #credit {
-  background-color: #895d5d;
+  background-color: #4e4149;
   color: white;
 }
 
 #credit .card__title {
   font-size: 2.7rem;
   font-family: "Great Vibes", cursive;
-  color: #ae7a7a;
+  color: #a65e8b;
   color: white;
 }
 
@@ -734,7 +739,7 @@ section#savedate .card .countdown__endtext {
   display: block;
   width: 100%;
   height: var(--divider-height);
-  max-width: 230px;
+  max-width: 270px;
   background-size: contain;
   margin: auto;
 }
@@ -801,23 +806,24 @@ section#gallery .card__img img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh;
+  position: relative;
+  height: calc(100vh - 59px);
   width: 100%;
-  background-color: #080808;
+  background-color: #3b2e1a;
+  --bingkai:300px;
 }
 
-.home:before {
+.home:after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: var(--bg-image);
+  background-image: url("./asset/bg.png");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: .4;
 }
 
 .home .ornament {
@@ -828,36 +834,28 @@ section#gallery .card__img img {
 
 .home .ornament__item {
   position: absolute;
-  height: 40%;
-  width: 40%;
+  height: 60%;
+  width: 60%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.home .ornament__item.top-left {
-  background-image: url("./asset/hero_left-top.png");
-  background-position: left top;
-  left: 0;
-  top: 0;
-}
-
 .home .ornament__item.top-right {
+  background-image: url("./asset/orn2.png");
   background-position: right top;
-  right: 0;
+  right: 0px;
   top: 0;
+  z-index: 1;
+  opacity: .5;
 }
 
 .home .ornament__item.bottom-left {
+  background-image: url("./asset/orn1.png");
   background-position: left bottom;
   left: 0;
   bottom: 0;
-}
-
-.home .ornament__item.bottom-right {
-  background-image: url("./asset/hero_right-bottom.png");
-  background-position: right bottom;
-  right: 0;
-  bottom: 0;
+  z-index: 1;
+  opacity: .5;
 }
 
 .home .content {
@@ -879,7 +877,7 @@ section#gallery .card__img img {
 }
 
 .home .content__item.text {
-  color: #e6e6e6;
+  color: #a65e8b;
   margin: 8px auto;
   font-size: 1.1rem;
 }
@@ -888,7 +886,7 @@ section#gallery .card__img img {
   text-align: center;
   font-family: "Great Vibes", cursive;
   font-size: 5rem;
-  color: white;
+  color: #a65e8b;
 }
 
 section#intro {
@@ -951,10 +949,10 @@ section#kisah .card__content {
 }
 
 section#kisah .card__content .timeline {
-  border-left: 3px solid #c8a7a7;
+  border-left: 3px solid #b39eab;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
-  color: #b48888;
+  color: #9c8192;
   letter-spacing: 0.5px;
   position: relative;
   line-height: 1.4em;
@@ -1013,10 +1011,10 @@ section#kisah .card__content .timeline .event:before, section#kisah .card__conte
 }
 
 section#kisah .card__content .timeline .event:after {
-  -webkit-box-shadow: 0 0 0 3px #c8a7a7;
-          box-shadow: 0 0 0 3px #c8a7a7;
+  -webkit-box-shadow: 0 0 0 3px #b39eab;
+          box-shadow: 0 0 0 3px #b39eab;
   left: -55px;
-  background: #fff0f1;
+  background: #fffdfe;
   border-radius: 50%;
   height: 11px;
   width: 11px;
@@ -1047,11 +1045,15 @@ section#livestreaming .card__item .link {
 
 section#livestreaming .card__item .link a {
   padding: 6px 12px;
-  background-color: #895d5d;
+  background-color: #a65e8b;
   color: white;
   text-decoration: none;
   font-size: 0.83rem;
   border-radius: 5px;
+}
+
+section#maps {
+  background-color: #fff3f9;
 }
 
 section#maps .card__item {
@@ -1076,7 +1078,7 @@ section#maps .card__actions {
 
 section#maps .card__actions a {
   padding: 8px 26px;
-  background-color: #037fa5;
+  background-color: #a65e8b;
   color: white;
   font-size: 0.83rem;
   margin-top: .7rem;
@@ -1085,12 +1087,12 @@ section#maps .card__actions a {
 }
 
 section#maps .card__actions a:focus, section#maps .card__actions a:active, section#maps .card__actions a:hover {
-  background-color: #036c8c;
+  background-color: #97537d;
   color: #e6e6e6;
 }
 
 #mempelai {
-  background-color: #f7f7f7;
+  background-color: #fff3f9;
 }
 
 #mempelai .card {
@@ -1110,7 +1112,7 @@ section#maps .card__actions a:focus, section#maps .card__actions a:active, secti
 }
 
 #mempelai .card__item {
-  padding: 1rem;
+  padding: 1.4rem;
   margin-left: 1rem;
   margin-right: 1rem;
   min-width: 300px;
@@ -1126,27 +1128,12 @@ section#maps .card__actions a:focus, section#maps .card__actions a:active, secti
           align-items: center;
   margin-bottom: 3rem;
   position: relative;
-  border-radius: 38px;
   position: relative;
-  background-color: white;
   z-index: 5;
 }
 
 #mempelai .card__item > * {
   z-index: 5;
-}
-
-#mempelai .card__item:after {
-  content: '';
-  position: absolute;
-  background-color: white;
-  height: 100%;
-  -webkit-transform: scaleY(1.1);
-          transform: scaleY(1.1);
-  border-radius: 50%;
-  width: 100%;
-  left: 0;
-  top: 0;
 }
 
 #mempelai .card__item .image {
@@ -1170,7 +1157,7 @@ section#maps .card__actions a:focus, section#maps .card__actions a:active, secti
   width: var(--card-img);
   height: var(--card-img);
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 40%;
   border: 5px solid #fff;
   -webkit-box-shadow: -4px 3px 19px -10px #333;
           box-shadow: -4px 3px 19px -10px #333;
@@ -1179,7 +1166,7 @@ section#maps .card__actions a:focus, section#maps .card__actions a:active, secti
 #mempelai .card__item .title {
   font-size: 1.3rem;
   margin-top: 1rem;
-  color: #ae7a7a;
+  color: #a65e8b;
   font-weight: 600;
 }
 
@@ -1223,7 +1210,7 @@ section#mengundang .card__item .deskripsi {
 }
 
 #music .play__btn {
-  background-color: #a46a6a;
+  background-color: #97537d;
   width: var(--btn-height);
   height: var(--btn-height);
   border-radius: 50%;
@@ -1265,7 +1252,7 @@ section#prokes {
 
 section#prokes::before {
   content: '';
-  background-color: rgba(51, 51, 51, 0.5);
+  background-color: rgba(50, 42, 47, 0.5);
   position: absolute;
   top: 0;
   left: 0;
@@ -1336,7 +1323,7 @@ section#prokes .card__image img {
 section#prokes .card__title {
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
-  color: #ae7a7a;
+  color: #a65e8b;
 }
 
 section#prokes .card__subtitle {
@@ -1357,7 +1344,7 @@ section#prokes .card__item {
 section#prokes .card__item ul,
 section#prokes .card__item ol {
   padding-left: 1.5rem;
-  color: #b48888;
+  color: #9c8192;
   font-weight: 400;
 }
 
@@ -1386,7 +1373,7 @@ section#quote .card {
 }
 
 section#quote .card__content {
-  background-color: white;
+  background-color: #fff3f9;
   border-radius: 6px;
   padding: 1.4rem;
 }
@@ -1428,17 +1415,20 @@ section#rsvp {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 600px;
-  margin: auto;
+  padding: inherit;
+  background-color: #fff3f9;
 }
 
 section#rsvp .rsvp__form {
   color: #e6e6e6;
   width: 100%;
+  padding: 2rem;
 }
 
 section#rsvp .rsvp__form .card {
   display: block;
+  max-width: 600px;
+  margin: auto;
 }
 
 section#rsvp .rsvp__form .card__subtitle {
@@ -1463,7 +1453,7 @@ section#rsvp .rsvp__form .card__form {
           flex-direction: column;
   text-align: left;
   padding: 2rem;
-  background-color: #895d5d;
+  background-color: #7b9041;
   border-radius: 8px;
   font-size: 0.83rem;
 }
@@ -1483,7 +1473,7 @@ section#rsvp .rsvp__form .card__form .input {
   width: 100%;
   padding: 8px;
   outline: none;
-  border: 1px solid #b79595;
+  border: 1px solid #adc176;
   border-radius: 6px;
   background-color: #fffbfb;
 }
@@ -1496,14 +1486,14 @@ section#rsvp .rsvp__form .card__form button {
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 8px 16px;
-  background-color: #6a4848;
+  background-color: #5d6d31;
   border-radius: 5px;
   font-size: 0.87rem;
   color: white;
 }
 
 section#rsvp .rsvp__form .card__form button:hover, section#rsvp .rsvp__form .card__form button:focus {
-  background-color: #5b3e3e;
+  background-color: #4e5b29;
   color: #f2f2f2;
 }
 
@@ -1516,6 +1506,11 @@ section#rsvp .rsvp__comment {
   text-align: left;
   padding: 1rem;
   width: 100%;
+}
+
+section#rsvp .rsvp__comment .card {
+  max-width: 600px;
+  margin: auto;
 }
 
 section#rsvp .rsvp__comment .card__header {
@@ -1573,7 +1568,7 @@ section#rsvp .rsvp__comment .card__content {
 }
 
 section#rsvp .rsvp__comment .card__item {
-  background-color: #fff0f1;
+  background-color: #fffdfe;
   border-radius: 10px;
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -1607,7 +1602,7 @@ section#rsvp .rsvp__comment .card__item .kehadiran {
   padding: 2px 8px;
   border-radius: 20px;
   font-weight: 600;
-  color: #ff2432;
+  color: #ff3198;
 }
 
 section#rsvp .rsvp__comment .card__item .kehadiran.success {
@@ -1637,7 +1632,7 @@ div#tab__menu {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(253, 247, 251, 0.9);
   z-index: 300;
   -webkit-box-shadow: 0px -1px 12px -8px #7b7b7b;
           box-shadow: 0px -1px 12px -8px #7b7b7b;
@@ -1666,7 +1661,7 @@ div#tab__menu .tab {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ae7a7a;
+  color: #a65e8b;
   text-decoration: none;
 }
 
@@ -1676,7 +1671,7 @@ div#tab__menu .tab__icon {
 }
 
 div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
-  color: #985d5d;
+  color: #874a70;
 }
 
 .is__modal div#tab__menu {
@@ -1753,6 +1748,7 @@ div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
   max-width: 500px;
   padding: 1rem;
   margin: auto;
+  z-index: 5;
 }
 
 @media screen and (max-width: 600px) {
@@ -1775,12 +1771,13 @@ div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
           flex-direction: column;
 }
 
+#welcome .modal__item.header > *:not(:first-child) {
+  margin-top: .4rem;
+}
+
 #welcome .modal__item.header .text {
   font-weight: 600;
   font-size: 1.1rem;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
 }
 
 #welcome .modal__item.header .name {
@@ -1792,9 +1789,6 @@ div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
           justify-content: center;
   font-family: "Great Vibes", cursive;
   letter-spacing: 2px;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
 }
 
 #welcome .modal__item.header .name > *:not(:first-child) {
@@ -1821,9 +1815,6 @@ div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
 }
 
 #welcome .modal__item.header .image img {
@@ -1877,7 +1868,7 @@ div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
 }
 
 #welcome .modal__item.action button {
-  padding: .6rem 2.6rem;
+  padding: .6rem 2.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1885,7 +1876,7 @@ div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.95rem;
-  background-color: #ae7a7a;
+  background-color: #a65e8b;
 }
 
 #welcome .modal__item.action button .icon {
@@ -1901,8 +1892,23 @@ div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(3, 3, 3, 0.749);
+  background-color: rgba(50, 42, 47, 0.85);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
+}
+
+#welcome:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: var(--bg-image);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .2;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
