@@ -834,32 +834,6 @@ section#gallery .card__img img {
   background-repeat: no-repeat;
 }
 
-.home .ornament__item.top-left {
-  background-image: url("./asset/hero_left-top.png");
-  background-position: left top;
-  left: 0;
-  top: 0;
-}
-
-.home .ornament__item.top-right {
-  background-position: right top;
-  right: 0;
-  top: 0;
-}
-
-.home .ornament__item.bottom-left {
-  background-position: left bottom;
-  left: 0;
-  bottom: 0;
-}
-
-.home .ornament__item.bottom-right {
-  background-image: url("./asset/hero_right-bottom.png");
-  background-position: right bottom;
-  right: 0;
-  bottom: 0;
-}
-
 .home .content {
   z-index: 10;
   text-align: center;
@@ -1279,15 +1253,14 @@ section#prokes::before {
 section#prokes .card {
   position: relative;
   z-index: 50;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 65%;
   max-width: 500px;
   padding: 1rem;
   opacity: 0;
   background-color: #e6e6e6;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
   top: -60px;
 }
 
@@ -1368,10 +1341,6 @@ section#prokes .card__item ol li {
 }
 
 @media screen and (max-width: 600px) {
-  section#prokes .card {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-  }
   section#prokes .card__image {
     width: 100%;
   }

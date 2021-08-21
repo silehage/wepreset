@@ -1,0 +1,27 @@
+.divider {
+  --divider-height:100px;
+  display: block;
+  width: 100%;
+  height: var(--divider-height);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  @media only screen and (max-width:768px) {
+    --divider-height: 80px;
+  }
+
+  &::before {
+    content: '';
+    background-image: url('./asset/divider.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    width:100%;
+    height: var(--divider-height);
+    max-width: 270px;
+    background-size: contain;
+    margin: auto;
+    // background-color: darken($backgroundColor, 6);
+  }
+  
+}

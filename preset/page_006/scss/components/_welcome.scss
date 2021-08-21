@@ -1,0 +1,177 @@
+#welcome {
+  --featured-image-height: 120px;
+  --featured-image-width: 150px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position:fixed;
+  display: flex;
+  opacity: 1;
+  z-index: 500;
+  padding:1.5rem 0;
+  color: white;
+  background-color: rgb(29, 29, 29);
+  @media screen and ( max-width: 600px ) {
+    padding:3px;
+  }
+
+
+  .divider {
+    display:none;
+    width: 100%;
+    height: 30px;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    &::before{
+      height: 30px;
+    }
+  }
+  .modal {
+  
+    &__content {
+      position:relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin:auto;
+      max-width: 500px;
+      padding: 1rem;
+      margin:auto;
+      z-index: 5;
+      @media screen and ( max-width: 600px ) {
+        padding:5px;
+      }
+  
+    }
+     &__item:not(:first-child) {
+      margin-top:.6rem;
+    }
+    &__item {
+      
+      &.header {
+        display:flex;
+        flex-direction: column;
+        & > *:not(:first-child){
+          margin-top:.4rem;
+        }
+        .text {
+          font-weight: $bold;
+          font-size: $h6;
+        }
+        .name { 
+          & > *:not(:first-child){
+            margin-left:.4rem;
+          }
+          display: flex;
+          justify-content: center;
+          font-family: $secondaryFont;
+          letter-spacing: 2px;
+
+          .title {
+            font-size: $h2;
+            @media screen and ( max-width: 600px ) {
+              font-size: $h3;
+            }
+          }
+
+        }
+        .image {
+          width:var(--featured-image-width);
+          height:var(--featured-image-height);
+          border-radius:12px ;
+          border: 4px solid white;
+          padding:7px;
+          box-shadow: -5px 2px 29px -10px;
+          overflow: hidden;
+          margin-left: auto;
+          margin-right: auto;
+          img {
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            border-radius:12px ;
+          }
+        }
+      }
+      &.body {
+        .title {
+          font-size: $h4;
+          @media screen and ( max-width: 600px ) {
+            font-size: $h5 
+          }
+        }
+        .label {
+          font-size: $p2;
+          @media screen and ( max-width: 600px ) {
+            font-size: $p3;
+          }
+        }
+        .description{
+          line-height: 1.4;
+          font-size: $p3;
+
+          @media screen and ( max-width: 600px ) {
+            font-size: 11px; 
+          }
+        }
+        .text{
+          font-size: 11px;
+          @media screen and ( max-width: 600px ) {
+            font-size: 9px; 
+          }
+        }
+      }
+      &.action {
+        button {
+          padding:.6rem 2.3rem;
+          display:flex;
+          align-items: center;
+          font-size: $p1;
+          background-color: $primary;
+          .icon {
+            margin-right: .4rem;
+          }
+        }
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('./asset/orn-1.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    @media screen and ( max-width: 600px ) {
+      display: none;
+    }
+    // -webkit-backdrop-filter: blur(8px);
+    // backdrop-filter: blur(8px);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: var(--bg-image);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .2;
+    z-index: 1;
+  }
+  
+  
+}

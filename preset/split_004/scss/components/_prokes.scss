@@ -26,13 +26,12 @@ section#prokes {
   .card {
     position:relative;
     z-index: 50;
-    display:grid;
+    display:flex;
     width:80%;
     max-width:600px;
     border:8px solid #fff;
     opacity:0;
     background-color: $primary;
-    grid-template-columns: repeat(2, 1fr);
 
       &__content {
         background-color: white;
@@ -97,7 +96,6 @@ section#prokes {
   section#prokes {
     .card {
       width:60%;
-      grid-template-columns: repeat(1, 1fr);
 
       &__image {
         width:100%;

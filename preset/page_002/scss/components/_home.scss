@@ -35,28 +35,28 @@
       background-repeat: no-repeat;
 
       &.top-left {
-        background-image: url('./asset/hero_left-top.png');
-        background-position: left top;
-        left:0;
-        top:0;
+        // background-image: url('./asset/hero_left-top.png');
+        // background-position: left top;
+        // left:0;
+        // top:0;
       }
       &.top-right {
         //  background-image: url('./asset/hero_right-top.png');
-        background-position: right top;
-        right:0;
-        top:0;
+        // background-position: right top;
+        // right:0;
+        // top:0;
       }
       &.bottom-left {
         //  background-image: url('./asset/hero_left-bottom.png');
-        background-position: left bottom;
-        left:0;
-        bottom: 0;
+        // background-position: left bottom;
+        // left:0;
+        // bottom: 0;
       }
       &.bottom-right {
-        background-image: url('./asset/hero_right-bottom.png');
-        background-position: right bottom;
-        right:0;
-        bottom:0;
+        // background-image: url('./asset/hero_right-bottom.png');
+        // background-position: right bottom;
+        // right:0;
+        // bottom:0;
       }
     }
   }

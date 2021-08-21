@@ -1,0 +1,166 @@
+html {
+  scroll-behavior: smooth;
+}
+*, ::before, ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
+p {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+body{
+  background-color: $backgroundColor;
+  font-family: $mainFont;
+  color: $baseColor;
+  font-size: $baseText;
+  overflow-x: hidden;
+}
+.btn,
+button {
+  cursor: pointer;
+  padding:.7em 2em;
+  font-size: $p3;
+  background-color: lighten($primary, 6);
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+ transition: all .3s ease-in-out;
+  
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    background-color:$primary;
+    color: darken(white,3);
+
+  }
+}
+
+#content {
+  position: relative;
+  max-width:768px;
+  margin-left:auto;
+  margin-right:auto;
+}
+body {
+  background-color: #e5e0db;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cpath fill='%23929dac' fill-opacity='0.08' d='M0 17.83V0h17.83a3 3 0 0 1-5.66 2H5.9A5 5 0 0 1 2 5.9v6.27a3 3 0 0 1-2 5.66zm0 18.34a3 3 0 0 1 2 5.66v6.27A5 5 0 0 1 5.9 52h6.27a3 3 0 0 1 5.66 0H0V36.17zM36.17 52a3 3 0 0 1 5.66 0h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 0 1 0-5.66V52H36.17zM0 31.93v-9.78a5 5 0 0 1 3.8.72l4.43-4.43a3 3 0 1 1 1.42 1.41L5.2 24.28a5 5 0 0 1 0 5.52l4.44 4.43a3 3 0 1 1-1.42 1.42L3.8 31.2a5 5 0 0 1-3.8.72zm52-14.1a3 3 0 0 1 0-5.66V5.9A5 5 0 0 1 48.1 2h-6.27a3 3 0 0 1-5.66-2H52v17.83zm0 14.1a4.97 4.97 0 0 1-1.72-.72l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1 0-5.52l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43c.53-.35 1.12-.6 1.72-.72v9.78zM22.15 0h9.78a5 5 0 0 1-.72 3.8l4.44 4.43a3 3 0 1 1-1.42 1.42L29.8 5.2a5 5 0 0 1-5.52 0l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1-.72-3.8zm0 52c.13-.6.37-1.19.72-1.72l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43a5 5 0 0 1 5.52 0l4.43-4.43a3 3 0 1 1 1.42 1.41l-4.44 4.43c.36.53.6 1.12.72 1.72h-9.78zm9.75-24a5 5 0 0 1-3.9 3.9v6.27a3 3 0 1 1-2 0V31.9a5 5 0 0 1-3.9-3.9h-6.27a3 3 0 1 1 0-2h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 1 1 2 0v6.27a5 5 0 0 1 3.9 3.9h6.27a3 3 0 1 1 0 2H31.9z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-position: left top;
+  background-attachment: fixed;
+
+}
+#content {
+  background-color:$backgroundColor;
+}
+main {
+  overflow-x: hidden;
+}
+strong {
+  font-weight: 600;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+h2.title {
+  font-size: $h2;
+}
+h3.title {
+  font-size: $h3;
+}
+h4.title {
+  font-size: $h4;
+}
+h5.title {
+  font-size: $h5;
+}
+h6.title {
+  font-size: $h6;
+}
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.card {
+  max-width: 1024px;
+  width:100%;
+  margin:auto;
+  overflow: hidden;
+
+  &__content {
+    padding:1rem;
+  }
+
+  &__title {
+    font-size: $h3;
+    font-family: $secondaryFont;
+    color: $primary;
+    font-weight: $bold;
+    line-height: 1.6;
+  }
+
+  &__subtitle {
+    font-size: $p2;
+    color:lighten($baseColor, 5);
+    line-height: 1.6;
+    width:90%;
+    max-width: 550px;
+    margin:auto;
+  }
+ 
+}
+// set content when modal welcome is active
+.animate {
+  // transform: translateY(100px);
+  opacity: 0;
+}
+.is__modal {
+  overflow: hidden;
+
+  #content,
+  #main {
+    overflow:hidden;
+  }
+  .panel {
+    &__first {
+      // position:relative;
+      width:100%;
+      opacity: .5;
+    }
+  }
+  .hero__content {
+    transform: translate(190px, 50px);
+    opacity: .4;
+  }
+}
+.no-scroll {
+  overflow: hidden
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+ 
+.panel {
+  &__first {
+    position:relative;
+    height: calc(100vh - 59px);
+    width:100%;
+    overflow: hidden;
+  }
+  &__second {
+    position: relative;
+    width:100%;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 3rem;
+  }
+}
+
