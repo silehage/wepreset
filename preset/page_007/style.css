@@ -232,9 +232,9 @@ p {
 }
 
 body {
-  background-color: #fff0f1;
+  background-color: #332f2e;
   font-family: "Montserrat", sans-serif;
-  color: #7d6464;
+  color: #ded7d3;
   font-size: 16px;
   overflow-x: hidden;
 }
@@ -244,7 +244,7 @@ button {
   cursor: pointer;
   padding: .7em 2em;
   font-size: 0.83rem;
-  background-color: #f39b9b;
+  background-color: #a36643;
   text-decoration: none;
   border-radius: 5px;
   color: white;
@@ -257,7 +257,7 @@ button:hover,
 button:focus,
 button:active {
   outline: none;
-  background-color: #f07f7f;
+  background-color: #8d583a;
   color: #f7f7f7;
 }
 
@@ -276,25 +276,9 @@ button:active {
 }
 
 main {
-  background-color: white;
+  background-color: #332f2e;
   overflow-x: hidden;
   position: relative;
-}
-
-main:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  content: '';
-  background-image: url("./asset/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position-x: center;
-  background-position-y: center;
-  background-attachment: fixed;
-  opacity: .3;
 }
 
 strong {
@@ -348,13 +332,13 @@ h6.title {
 .card__title {
   font-size: 2.1rem;
   font-family: "Great Vibes", cursive;
-  color: #ca127d;
+  color: #ddb49c;
   font-weight: 600;
 }
 
 .card__subtitle {
   font-size: 0.87rem;
-  color: #8b6f6f;
+  color: #e9e5e2;
   line-height: 1.6;
   max-width: 90%;
   max-width: 600px;
@@ -595,7 +579,7 @@ h6.title {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.95rem;
-  background-color: #ca127d;
+  background-color: #ddb49c;
 }
 
 #welcome .modal__item.action button .icon {
@@ -775,11 +759,10 @@ section#acara .data__mempelai .card__item {
 
 section#acara .data__mempelai .card__item .sparator {
   margin: 1rem auto;
-  color: rgba(128, 128, 128, 0.8);
 }
 
 section#acara .data__mempelai .card__item .title {
-  color: #ca127d;
+  color: #ddb49c;
   font-weight: 600;
   font-family: "Great Vibes", cursive;
   margin: .5rem auto;
@@ -788,7 +771,6 @@ section#acara .data__mempelai .card__item .title {
 
 section#acara .data__mempelai .card__item .description {
   font-size: 0.78rem;
-  color: rgba(128, 128, 128, 0.8);
 }
 
 section#acara .data__event .card {
@@ -812,7 +794,7 @@ section#acara .data__event .card__item {
 }
 
 section#acara .data__event .card__item .title {
-  color: #ca127d;
+  color: #ddb49c;
   font-weight: 600;
   margin: .7rem auto;
   font-size: 1.1rem;
@@ -862,10 +844,6 @@ section#acara .data__event .card__item .tempat .svg_icon {
   height: 50px;
 }
 
-#mempelai {
-  background-color: #f07f7f;
-}
-
 #mempelai .card {
   --card-img:180px;
 }
@@ -910,17 +888,6 @@ section#acara .data__event .card__item .tempat .svg_icon {
   border-radius: 8px;
 }
 
-#mempelai .card__item:before {
-  content: '';
-  background-color: rgba(255, 255, 255, 0.8);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 60%;
-  border-radius: 12px;
-}
-
 #mempelai .card__item .image {
   position: relative;
   width: 100%;
@@ -950,7 +917,7 @@ section#acara .data__event .card__item .tempat .svg_icon {
 #mempelai .card__item .title {
   font-size: 1.3rem;
   margin-top: 1rem;
-  color: #ca127d;
+  color: #ddb49c;
   font-weight: 600;
   z-index: 2;
 }
@@ -962,7 +929,7 @@ section#acara .data__event .card__item .tempat .svg_icon {
 }
 
 .divider {
-  --divider-height:60px;
+  --divider-height:90px;
   display: block;
   width: 100%;
   height: var(--divider-height);
@@ -1059,6 +1026,10 @@ section#mengundang .card__item .deskripsi {
   font-size: 0.83rem;
 }
 
+section#angpao {
+  background-color: #4e4846;
+}
+
 section#angpao .card__title {
   padding-bottom: .3rem;
 }
@@ -1146,7 +1117,7 @@ section#angpao .card__content .card__item img {
 }
 
 section#maps {
-  background-color: lightcoral;
+  background-color: #4e4846;
 }
 
 section#maps .card__title {
@@ -1179,17 +1150,10 @@ section#maps .card__actions {
 
 section#maps .card__actions a {
   padding: 8px 26px;
-  background-color: #037fa5;
   color: white;
   font-size: 0.83rem;
   margin-top: .7rem;
   text-decoration: none;
-  border-radius: 5px;
-}
-
-section#maps .card__actions a:focus, section#maps .card__actions a:active, section#maps .card__actions a:hover {
-  background-color: #036c8c;
-  color: #e6e6e6;
 }
 
 section#rsvp {
@@ -1203,8 +1167,9 @@ section#rsvp {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 600px;
-  margin: auto;
+  padding-left: inherit;
+  padding-right: inherit;
+  background-color: #4e4846;
 }
 
 section#rsvp .rsvp__form {
@@ -1214,6 +1179,8 @@ section#rsvp .rsvp__form {
 
 section#rsvp .rsvp__form .card {
   display: block;
+  max-width: 600px;
+  margin: auto;
 }
 
 section#rsvp .rsvp__form .card__title {
@@ -1242,7 +1209,7 @@ section#rsvp .rsvp__form .card__form {
           flex-direction: column;
   text-align: left;
   padding: 2rem;
-  background-color: #f07f7f;
+  background-color: #332f2e;
   border-radius: 8px;
   font-size: 0.83rem;
 }
@@ -1262,7 +1229,7 @@ section#rsvp .rsvp__form .card__form .input {
   width: 100%;
   padding: 8px;
   outline: none;
-  border: 1px solid #fbdada;
+  border: 1px solid #c28b6b;
   border-radius: 6px;
   background-color: #fffbfb;
 }
@@ -1275,14 +1242,14 @@ section#rsvp .rsvp__form .card__form button {
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 8px 16px;
-  background-color: #eb5252;
+  background-color: #4e4846;
   border-radius: 5px;
   font-size: 0.87rem;
   color: white;
 }
 
 section#rsvp .rsvp__form .card__form button:hover, section#rsvp .rsvp__form .card__form button:focus {
-  background-color: #e83b3b;
+  background-color: #5c5551;
   color: #f2f2f2;
 }
 
@@ -1295,11 +1262,13 @@ section#rsvp .rsvp__comment {
   text-align: left;
   padding: 1rem;
   width: 100%;
+  max-width: 600px;
+  margin: auto;
 }
 
 section#rsvp .rsvp__comment .card__header {
   --btn-width: 1.6rem;
-  --btn-height: 1.2rem;
+  --btn-height: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1319,6 +1288,9 @@ section#rsvp .rsvp__comment .card__header .paginate {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section#rsvp .rsvp__comment .card__header .paginate__counter {
@@ -1334,9 +1306,9 @@ section#rsvp .rsvp__comment .card__header .paginate__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1353,7 +1325,7 @@ section#rsvp .rsvp__comment .card__content {
 }
 
 section#rsvp .rsvp__comment .card__item {
-  background-color: #fff0f1;
+  background-color: #332f2e;
   border-radius: 10px;
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -1387,7 +1359,7 @@ section#rsvp .rsvp__comment .card__item .kehadiran {
   padding: 2px 8px;
   border-radius: 20px;
   font-weight: 600;
-  color: #ff2432;
+  color: black;
 }
 
 section#rsvp .rsvp__comment .card__item .kehadiran.success {
@@ -1424,7 +1396,7 @@ section#rsvp .rsvp__comment .card__item .ucapan {
 }
 
 #music .play__btn {
-  background-color: #ed6868;
+  background-color: #7b4d32;
   width: var(--btn-height);
   height: var(--btn-height);
   border-radius: 50%;
@@ -1559,7 +1531,7 @@ div#tab__menu .tab {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #f07f7f;
+  color: #8d583a;
   text-decoration: none;
 }
 
@@ -1569,7 +1541,7 @@ div#tab__menu .tab__icon {
 }
 
 div#tab__menu .tab:hover, div#tab__menu .tab:focus, div#tab__menu .tab:active {
-  color: #eb5252;
+  color: #69422b;
 }
 
 .is__modal div#tab__menu {
@@ -1596,7 +1568,7 @@ section#kisah {
   --timeline-width: 90%;
   --justify-content: center;
   --space-left: 3rem;
-  padding: 5px;
+  padding: 3rem 5px;
 }
 
 section#kisah .card__content {
@@ -1620,10 +1592,10 @@ section#kisah .card__content {
 }
 
 section#kisah .card__content .timeline {
-  border-left: 3px solid #977d7d;
+  border-left: 3px solid #f4f2f0;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
-  color: #7d6464;
+  color: #ded7d3;
   letter-spacing: 0.5px;
   position: relative;
   line-height: 1.4em;
@@ -1682,10 +1654,10 @@ section#kisah .card__content .timeline .event:before, section#kisah .card__conte
 }
 
 section#kisah .card__content .timeline .event:after {
-  -webkit-box-shadow: 0 0 0 3px #977d7d;
-          box-shadow: 0 0 0 3px #977d7d;
+  -webkit-box-shadow: 0 0 0 3px #f4f2f0;
+          box-shadow: 0 0 0 3px #f4f2f0;
   left: -55px;
-  background: #fff0f1;
+  background: #332f2e;
   border-radius: 50%;
   height: 11px;
   width: 11px;
@@ -1713,6 +1685,7 @@ section#prokes {
   -webkit-transition: opacity .5s linear;
   transition: opacity .5s linear;
   padding: 0;
+  color: #333333;
 }
 
 section#prokes::before {
@@ -1734,16 +1707,16 @@ section#prokes .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 65%;
-  max-width: 500px;
+  width: 70%;
+  max-width: 550px;
   padding: 1.3rem;
   opacity: 0;
-  background-color: #f07f7f;
+  background-color: #ded7d3;
   top: -60px;
 }
 
 section#prokes .card__content {
-  background-color: white;
+  background-color: #ded7d3;
 }
 
 section#prokes .card__close {
@@ -1787,11 +1760,12 @@ section#prokes .card__image img {
 section#prokes .card__title {
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
-  color: #ca127d;
+  color: #333333;
 }
 
 section#prokes .card__subtitle {
   font-size: 0.83rem;
+  color: #333333;
 }
 
 section#prokes .card__body {
@@ -1799,6 +1773,7 @@ section#prokes .card__body {
   background-color: rgba(245, 245, 245, 0.493);
   text-align: left;
   padding: 1rem;
+  color: #333333;
 }
 
 section#prokes .card__item {
@@ -1808,7 +1783,7 @@ section#prokes .card__item {
 section#prokes .card__item ul,
 section#prokes .card__item ol {
   padding-left: 1.5rem;
-  color: #7d6464;
+  color: #333333;
   font-weight: 400;
 }
 
@@ -1829,14 +1804,14 @@ section#prokes .card__item ol li {
 }
 
 #credit {
-  background-color: #f07f7f;
+  background-color: #181616;
   color: white;
 }
 
 #credit .card__title {
   font-size: 2.7rem;
   font-family: "Great Vibes", cursive;
-  color: #ca127d;
+  color: #ddb49c;
   color: white;
 }
 
@@ -1882,7 +1857,7 @@ section#savedate .card .countdown__container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #ca127d;
+  color: #ddb49c;
 }
 
 section#savedate .card .countdown__block {
@@ -1944,7 +1919,8 @@ section#quote .card {
 }
 
 section#quote .card__content {
-  background-color: white;
+  background-color: #69615d;
+  color: #ddb49c;
   border-radius: 6px;
   padding: 1.4rem;
 }
@@ -1975,10 +1951,26 @@ section#quote .card__content footer {
   font-size: 1rem;
 }
 
+section#livestreaming .card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 section#livestreaming .card__item {
   padding: 1rem;
-  margin-bottom: .5rem;
-  margin-top: .5rem;
+  margin: .5rem;
+  background-color: #9d9490;
+  color: #332f2e;
+  min-width: 269px;
 }
 
 section#livestreaming .card__item .heading {
@@ -1998,7 +1990,7 @@ section#livestreaming .card__item .link {
 
 section#livestreaming .card__item .link a {
   padding: 6px 12px;
-  background-color: #f07f7f;
+  background-color: #8d583a;
   color: white;
   text-decoration: none;
   font-size: 0.83rem;

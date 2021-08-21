@@ -1,0 +1,38 @@
+section#maps {
+  background-color: lighten($backgroundColor, 10);
+  .card {
+    &__title {
+      color: #fff;
+    }
+    &__subtitle {
+      color: rgba(#fff, .7);
+
+    }
+    &__item {
+      padding:1.5rem 0;
+      .maps {
+        border:8px solid white;
+        background-color: $light;
+        max-width: 700px;
+        margin:auto;
+        iframe {
+          height: 290px;
+          width: 100%;
+        }
+      }
+
+    }
+    &__actions {
+      margin-top: 1rem;
+      
+        a {
+        padding:8px 26px;
+        color: white;
+        font-size: $p3;
+        margin-top:.7rem;
+        text-decoration: none;
+      }
+    }
+   
+  }
+}
