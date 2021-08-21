@@ -1,5 +1,7 @@
 section#gallery {
   .card {
+    max-width: 768px;
+    margin: auto;
 
     &__title {
 
@@ -18,13 +20,10 @@ section#gallery {
       
       & > * {
         break-inside: avoid;
-        margin-bottom: var(--gap);
+        // margin-bottom: var(--gap);
       }
         @media only screen and (min-width:768px) {
           --columns:3;
-        }
-        @media only screen and (min-width:1024px) {
-          --columns:4;
         }
 
         @supports(grid-template-rows: masonry) {

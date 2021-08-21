@@ -580,6 +580,7 @@ h6.title {
           align-items: center;
   font-size: 0.95rem;
   background-color: #ddb49c;
+  color: #333333;
 }
 
 #welcome .modal__item.action button .icon {
@@ -638,34 +639,25 @@ h6.title {
 
 .home .ornament__item {
   position: absolute;
-  height: 40%;
-  width: 40%;
+  height: 60%;
+  width: 60%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 600px) {
+  .home .ornament__item {
+    height: 40%;
+    width: 40%;
+  }
+}
+
 .home .ornament__item.top-left {
+  background-image: url("./asset/orn-top-left.png");
   background-position: left top;
   left: 0;
   top: 0;
-}
-
-.home .ornament__item.top-right {
-  background-position: right top;
-  right: 0;
-  top: 0;
-}
-
-.home .ornament__item.bottom-left {
-  background-position: left bottom;
-  left: 0;
-  bottom: 0;
-}
-
-.home .ornament__item.bottom-right {
-  background-position: right bottom;
-  right: 0;
-  bottom: 0;
+  opacity: .6;
 }
 
 .home .content {
@@ -956,6 +948,11 @@ section#acara .data__event .card__item .tempat .svg_icon {
   margin: auto;
 }
 
+section#gallery .card {
+  max-width: 768px;
+  margin: auto;
+}
+
 section#gallery .card__subtitle {
   font-size: 0.87rem;
 }
@@ -973,18 +970,11 @@ section#gallery .card__content {
 section#gallery .card__content > * {
   -webkit-column-break-inside: avoid;
           break-inside: avoid;
-  margin-bottom: var(--gap);
 }
 
 @media only screen and (min-width: 768px) {
   section#gallery .card__content {
     --columns:3;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  section#gallery .card__content {
-    --columns:4;
   }
 }
 
@@ -1922,7 +1912,9 @@ section#quote .card__content {
   background-color: #69615d;
   color: #ddb49c;
   border-radius: 6px;
-  padding: 1.4rem;
+  padding: 2rem;
+  max-width: 750px;
+  margin: auto;
 }
 
 section#quote .card__content blockquote {
@@ -1945,7 +1937,6 @@ section#quote .card__content blockquote::after {
 
 section#quote .card__content footer {
   margin-top: 1rem;
-  margin-bottom: 1rem;
   display: block;
   font-weight: 600;
   font-size: 1rem;

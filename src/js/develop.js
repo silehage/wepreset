@@ -7,7 +7,7 @@
 
 let is__development = false;
 
-// is__development = true
+is__development = true
 
 if (is__development) {
   document.body.classList.remove('is__modal')

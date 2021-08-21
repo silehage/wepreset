@@ -233,7 +233,6 @@
 
 
 
-
   startWelcomeModal()
   startAnimated()
   startSmoothScroll()
