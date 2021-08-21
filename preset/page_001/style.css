@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Great+Vibes&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
-  line-height: 1.15;
-  /* 1 */
+  line-height: normal;
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
@@ -99,8 +98,7 @@ textarea {
   /* 1 */
   font-size: 100%;
   /* 1 */
-  line-height: 1.15;
-  /* 1 */
+  line-height: normal;
   margin: 0;
   /* 2 */
 }
