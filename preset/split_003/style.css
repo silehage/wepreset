@@ -848,9 +848,6 @@ section#acara .data__event .card__item .tanggal {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-bottom: .6rem;
 }
 
@@ -869,9 +866,6 @@ section#acara .data__event .card__item .jam {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 section#acara .data__event .card__item .jam .svg_icon {
