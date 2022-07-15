@@ -2,7 +2,7 @@
 
 **Install**
 
-Hanya download dan edit.
+Download dan edit.
 
 **Requirements**
 
